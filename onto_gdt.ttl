@@ -1,0 +1,1038 @@
+@prefix : <http://example.org/onto-gdt#> .
+@prefix bfo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/onto-gdt> a owl:Ontology ;
+    owl:imports <http://purl.obolibrary.org/obo/bfo.owl> ;
+    rdfs:label "Onto-GDT"@en ;
+    rdfs:comment "Ontology generated from suggestions_branchements_onto_gdt.tex tables."@en .
+
+bfo:BFO_0000024 a owl:Class ;
+    rdfs:label "fiat object part"@en .
+
+bfo:BFO_0000031 a owl:Class ;
+    rdfs:label "generically dependent continuant"@en .
+
+bfo:BFO_0000141 a owl:Class ;
+    rdfs:label "immaterial entity"@en .
+
+bfo:BFO_0000030 a owl:Class ;
+    rdfs:label "object"@en .
+
+bfo:BFO_0000027 a owl:Class ;
+    rdfs:label "object aggregate"@en .
+
+bfo:BFO_0000026 a owl:Class ;
+    rdfs:label "one-dimensional spatial region"@en .
+
+bfo:BFO_0000015 a owl:Class ;
+    rdfs:label "process"@en .
+
+bfo:BFO_0000019 a owl:Class ;
+    rdfs:label "quality"@en .
+
+bfo:BFO_0000145 a owl:Class ;
+    rdfs:label "relational quality"@en .
+
+bfo:BFO_0000009 a owl:Class ;
+    rdfs:label "two-dimensional spatial region"@en .
+
+bfo:BFO_0000018 a owl:Class ;
+    rdfs:label "zero-dimensional spatial region"@en .
+
+:applies_to a owl:ObjectProperty ;
+    rdfs:label "applies to"@en .
+
+:bearer_of a owl:ObjectProperty ;
+    rdfs:label "bearer of"@en .
+
+:conforms_to a owl:ObjectProperty ;
+    rdfs:label "conforms to"@en .
+
+:constrains a owl:ObjectProperty ;
+    rdfs:label "constrains"@en .
+
+:derived_from a owl:ObjectProperty ;
+    rdfs:label "derived from"@en .
+
+:derives a owl:ObjectProperty ;
+    rdfs:label "derives"@en .
+
+:evaluated_by a owl:ObjectProperty ;
+    rdfs:label "evaluated by"@en .
+
+:evaluates a owl:ObjectProperty ;
+    rdfs:label "evaluates"@en .
+
+:has_output a owl:ObjectProperty ;
+    rdfs:label "has output"@en .
+
+:has_part a owl:ObjectProperty ;
+    rdfs:label "has part"@en .
+
+:has_participant a owl:ObjectProperty ;
+    rdfs:label "has participant"@en .
+
+:inheres_in a owl:ObjectProperty ;
+    rdfs:label "inheres in"@en .
+
+:input_to a owl:ObjectProperty ;
+    rdfs:label "input to"@en .
+
+:is_about a owl:ObjectProperty ;
+    rdfs:label "is about"@en .
+
+:output_of a owl:ObjectProperty ;
+    rdfs:label "output of"@en .
+
+:part_of a owl:ObjectProperty ;
+    rdfs:label "part of"@en .
+
+:referenced_by a owl:ObjectProperty ;
+    rdfs:label "referenced by"@en .
+
+:references a owl:ObjectProperty ;
+    rdfs:label "references"@en .
+
+:related_to a owl:ObjectProperty ;
+    rdfs:label "related to"@en .
+
+:source_for a owl:ObjectProperty ;
+    rdfs:label "source for"@en .
+
+:specified_by a owl:ObjectProperty ;
+    rdfs:label "specified by"@en .
+
+:specifies_characteristic a owl:ObjectProperty ;
+    rdfs:label "specifies characteristic"@en .
+
+:ActualDiameter a owl:Class ;
+    rdfs:label "Actual Diameter"@en ;
+    skos:prefLabel "Actual diameter"@en ;
+    rdfs:comment "A real property of the feature, not of the drawing."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019>,
+        [ a owl:Restriction ; owl:onProperty :inheres_in ; owl:someValuesFrom :FeatureOfSize ],
+        [ a owl:Restriction ; owl:onProperty :evaluated_by ; owl:someValuesFrom :MeasurementProcess ] .
+
+:ActualLength a owl:Class ;
+    rdfs:label "Actual Length"@en ;
+    skos:prefLabel "Actual length"@en ;
+    rdfs:comment "A real property of the part."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019>,
+        [ a owl:Restriction ; owl:onProperty :inheres_in ; owl:someValuesFrom :Part ],
+        [ a owl:Restriction ; owl:onProperty :evaluated_by ; owl:someValuesFrom :MeasurementProcess ] .
+
+:ActualThickness a owl:Class ;
+    rdfs:label "Actual Thickness"@en ;
+    skos:prefLabel "Actual thickness"@en ;
+    rdfs:comment "A real measurable property of the part."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019>,
+        [ a owl:Restriction ; owl:onProperty :inheres_in ; owl:someValuesFrom :Part ],
+        [ a owl:Restriction ; owl:onProperty :evaluated_by ; owl:someValuesFrom :MeasurementProcess ] .
+
+:AllAroundSpecification a owl:Class ;
+    rdfs:label "All Around Specification"@en ;
+    skos:prefLabel "All around specification"@en ;
+    rdfs:comment "A symbolic scope indicator."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :SurfacePortion ],
+        [ a owl:Restriction ; owl:onProperty :part_of ; owl:someValuesFrom :FeatureControlFrame ] .
+
+:AllOverSpecification a owl:Class ;
+    rdfs:label "All Over Specification"@en ;
+    skos:prefLabel "All over specification"@en ;
+    rdfs:comment "Another symbolic scope indicator."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :Part ],
+        [ a owl:Restriction ; owl:onProperty :part_of ; owl:someValuesFrom :FeatureControlFrame ] .
+
+:AngularityDeviation a owl:Class ;
+    rdfs:label "Angularity Deviation"@en ;
+    skos:prefLabel "Angularity deviation"@en ;
+    rdfs:comment "Depends on a specified angular relation to a datum."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000145>,
+        [ a owl:Restriction ; owl:onProperty :inheres_in ; owl:someValuesFrom :TolerancedFeature ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :DatumPlane ],
+        [ a owl:Restriction ; owl:onProperty :specified_by ; owl:someValuesFrom :AngularityToleranceSpecification ],
+        [ a owl:Restriction ; owl:onProperty :evaluated_by ; owl:someValuesFrom :MeasurementProcess ] .
+
+:AngularityToleranceSpecification a owl:Class ;
+    rdfs:label "Angularity Tolerance Specification"@en ;
+    skos:prefLabel "Angularity tolerance specification"@en ;
+    rdfs:comment "Same logic for angularity."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        :OrientationToleranceSpecification,
+        [ a owl:Restriction ; owl:onProperty :specifies_characteristic ; owl:someValuesFrom :AngularityDeviation ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :DatumReferenceSpecification ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :TargetAngleSpecification ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :PlanarToleranceZone ],
+        [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :TolerancedFeature ] .
+
+:AnnularToleranceZone a owl:Class ;
+    rdfs:label "Annular Tolerance Zone"@en ;
+    skos:prefLabel "Annular tolerance zone"@en ;
+    rdfs:comment "Circularity examples use an annular region between concentric circles."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000141>,
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :CircularityToleranceSpecification ] .
+
+:Assembly a owl:Class ;
+    rdfs:label "Assembly"@en ;
+    skos:prefLabel "Assembly"@en ;
+    rdfs:comment "An assembly is made of several material entities taken together; the GPS fiche is explicitly extended to assemblies."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000027>,
+        [ a owl:Restriction ; owl:onProperty :has_part ; owl:someValuesFrom :Part ],
+        [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :GeometricalSpecification ],
+        [ a owl:Restriction ; owl:onProperty :has_participant ; owl:someValuesFrom :InspectionProcess ],
+        [ a owl:Restriction ; owl:onProperty :has_participant ; owl:someValuesFrom :VerificationProcess ] .
+
+:AssociatedCircle a owl:Class ;
+    rdfs:label "Associated Circle"@en ;
+    skos:prefLabel "Associated circle"@en ;
+    rdfs:comment "BFO top-level has no dedicated circle class; use immaterial entity."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000141>,
+        [ a owl:Restriction ; owl:onProperty :derived_from ; owl:someValuesFrom :NonIdealGeometricElement ],
+        [ a owl:Restriction ; owl:onProperty :output_of ; owl:someValuesFrom :AssociationOperation ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :CircularityDeviation ] .
+
+:AssociatedCone a owl:Class ;
+    rdfs:label "Associated Cone"@en ;
+    skos:prefLabel "Associated cone"@en ;
+    rdfs:comment "An ideal cone is immaterial and has no more precise BFO top-level slot."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000141>,
+        [ a owl:Restriction ; owl:onProperty :derived_from ; owl:someValuesFrom :NonIdealGeometricElement ],
+        [ a owl:Restriction ; owl:onProperty :output_of ; owl:someValuesFrom :AssociationOperation ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :GeometricalCharacteristic ] .
+
+:AssociatedCylinder a owl:Class ;
+    rdfs:label "Associated Cylinder"@en ;
+    skos:prefLabel "Associated cylinder"@en ;
+    rdfs:comment "Same logic for an ideal cylinder."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000141>,
+        [ a owl:Restriction ; owl:onProperty :derived_from ; owl:someValuesFrom :NonIdealGeometricElement ],
+        [ a owl:Restriction ; owl:onProperty :output_of ; owl:someValuesFrom :AssociationOperation ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :CylindricityDeviation ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :EnvelopeRequirement ] .
+
+:AssociatedGeometricElement a owl:Class ;
+    rdfs:label "Associated Geometric Element"@en ;
+    skos:prefLabel "Associated geometric element"@en ;
+    rdfs:comment "An associated element is ideal and obtained by association from a non-ideal element."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000141>,
+        [ a owl:Restriction ; owl:onProperty :derived_from ; owl:someValuesFrom :NonIdealGeometricElement ],
+        [ a owl:Restriction ; owl:onProperty :output_of ; owl:someValuesFrom :AssociationOperation ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :GeometricalCharacteristic ] .
+
+:AssociatedLine a owl:Class ;
+    rdfs:label "Associated Line"@en ;
+    skos:prefLabel "Associated line"@en ;
+    rdfs:comment "An ideal line/axis is best captured as a 1D spatial region."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000026>,
+        [ a owl:Restriction ; owl:onProperty :derived_from ; owl:someValuesFrom :NonIdealGeometricElement ],
+        [ a owl:Restriction ; owl:onProperty :output_of ; owl:someValuesFrom :AssociationOperation ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :StraightnessDeviation ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :PerpendicularityDeviation ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :AngularityDeviation ] .
+
+:AssociatedPlane a owl:Class ;
+    rdfs:label "Associated Plane"@en ;
+    skos:prefLabel "Associated plane"@en ;
+    rdfs:comment "An ideal plane is best captured as a 2D spatial region."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000009>,
+        [ a owl:Restriction ; owl:onProperty :derived_from ; owl:someValuesFrom :NonIdealGeometricElement ],
+        [ a owl:Restriction ; owl:onProperty :output_of ; owl:someValuesFrom :AssociationOperation ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :FlatnessDeviation ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :ParallelismDeviation ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :PerpendicularityDeviation ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :AngularityDeviation ] .
+
+:AssociatedPoint a owl:Class ;
+    rdfs:label "Associated Point"@en ;
+    skos:prefLabel "Associated point"@en ;
+    rdfs:comment "A point-like ideal reference is best captured as a 0D spatial region."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000018>,
+        [ a owl:Restriction ; owl:onProperty :derived_from ; owl:someValuesFrom :NonIdealGeometricElement ],
+        [ a owl:Restriction ; owl:onProperty :output_of ; owl:someValuesFrom :AssociationOperation ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :GeometricalCharacteristic ] .
+
+:AssociatedSphere a owl:Class ;
+    rdfs:label "Associated Sphere"@en ;
+    skos:prefLabel "Associated sphere"@en ;
+    rdfs:comment "Same logic for sphere."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000141>,
+        [ a owl:Restriction ; owl:onProperty :derived_from ; owl:someValuesFrom :NonIdealGeometricElement ],
+        [ a owl:Restriction ; owl:onProperty :output_of ; owl:someValuesFrom :AssociationOperation ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :GeometricalCharacteristic ] .
+
+:AssociationOperation a owl:Class ;
+    rdfs:label "Association Operation"@en ;
+    skos:prefLabel "Association operation"@en ;
+    rdfs:comment "Association fits ideal element(s) to non-ideal element(s) according to constraints/objective."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015>,
+        [ a owl:Restriction ; owl:onProperty :part_of ; owl:someValuesFrom :GeometricalIdentificationProcess ],
+        [ a owl:Restriction ; owl:onProperty :has_participant ; owl:someValuesFrom :NonIdealGeometricElement ],
+        [ a owl:Restriction ; owl:onProperty :has_output ; owl:someValuesFrom :AssociatedGeometricElement ],
+        [ a owl:Restriction ; owl:onProperty :has_output ; owl:someValuesFrom :AssociatedPoint ],
+        [ a owl:Restriction ; owl:onProperty :has_output ; owl:someValuesFrom :AssociatedLine ],
+        [ a owl:Restriction ; owl:onProperty :has_output ; owl:someValuesFrom :AssociatedPlane ],
+        [ a owl:Restriction ; owl:onProperty :has_output ; owl:someValuesFrom :AssociatedCircle ],
+        [ a owl:Restriction ; owl:onProperty :has_output ; owl:someValuesFrom :AssociatedCylinder ],
+        [ a owl:Restriction ; owl:onProperty :has_output ; owl:someValuesFrom :AssociatedCone ],
+        [ a owl:Restriction ; owl:onProperty :has_output ; owl:someValuesFrom :AssociatedSphere ] .
+
+:BasicDimension a owl:Class ;
+    rdfs:label "Basic Dimension"@en ;
+    skos:prefLabel "Basic dimension"@en ;
+    rdfs:comment "A theoretically exact dimension used to define size, location, or orientation."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        :DimensionSpecification,
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :DatumReferenceSpecification ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :FeatureControlFrame ] .
+
+:BetweenSymbolSpecification a owl:Class ;
+    rdfs:label "Between Symbol Specification"@en ;
+    skos:prefLabel "Between symbol specification"@en ;
+    rdfs:comment "A symbolic limiter of where a tolerance applies."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :SurfacePortion ],
+        [ a owl:Restriction ; owl:onProperty :part_of ; owl:someValuesFrom :FeatureControlFrame ] .
+
+:CircularRunoutToleranceSpecification a owl:Class ;
+    rdfs:label "Circular Runout Tolerance Specification"@en ;
+    skos:prefLabel "Circular runout tolerance specification"@en ;
+    rdfs:comment "A symbolic GD&T control interpreted during rotation."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        :RunoutToleranceSpecification,
+        [ a owl:Restriction ; owl:onProperty :specifies_characteristic ; owl:someValuesFrom :CircularRunoutValue ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :DatumAxis ],
+        [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :TolerancedFeature ] .
+
+:CircularRunoutValue a owl:Class ;
+    rdfs:label "Circular Runout Value"@en ;
+    skos:prefLabel "Circular runout value"@en ;
+    rdfs:comment "Depends on rotation around a datum axis."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000145>,
+        [ a owl:Restriction ; owl:onProperty :inheres_in ; owl:someValuesFrom :TolerancedFeature ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :DatumAxis ],
+        [ a owl:Restriction ; owl:onProperty :specified_by ; owl:someValuesFrom :CircularRunoutToleranceSpecification ],
+        [ a owl:Restriction ; owl:onProperty :evaluated_by ; owl:someValuesFrom :InspectionProcess ] .
+
+:CircularityDeviation a owl:Class ;
+    rdfs:label "Circularity Deviation"@en ;
+    skos:prefLabel "Circularity deviation"@en ;
+    rdfs:comment "Defined relative to an associated ideal circle."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000145>,
+        [ a owl:Restriction ; owl:onProperty :inheres_in ; owl:someValuesFrom :TolerancedFeature ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :AssociatedCircle ],
+        [ a owl:Restriction ; owl:onProperty :specified_by ; owl:someValuesFrom :CircularityToleranceSpecification ],
+        [ a owl:Restriction ; owl:onProperty :evaluated_by ; owl:someValuesFrom :MeasurementProcess ] .
+
+:CircularityToleranceSpecification a owl:Class ;
+    rdfs:label "Circularity Tolerance Specification"@en ;
+    skos:prefLabel "Circularity tolerance specification"@en ;
+    rdfs:comment "Same logic for circularity."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        :FormToleranceSpecification,
+        [ a owl:Restriction ; owl:onProperty :specifies_characteristic ; owl:someValuesFrom :CircularityDeviation ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :AnnularToleranceZone ],
+        [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :TolerancedFeature ] .
+
+:CoaxialityDeviation a owl:Class ;
+    rdfs:label "Coaxiality Deviation"@en ;
+    skos:prefLabel "Coaxiality deviation"@en ;
+    rdfs:comment "Defined relative to a datum axis/reference axis."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000145>,
+        [ a owl:Restriction ; owl:onProperty :inheres_in ; owl:someValuesFrom :TolerancedFeature ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :DatumAxis ],
+        [ a owl:Restriction ; owl:onProperty :specified_by ; owl:someValuesFrom :CoaxialityToleranceSpecification ],
+        [ a owl:Restriction ; owl:onProperty :evaluated_by ; owl:someValuesFrom :MeasurementProcess ] .
+
+:CoaxialityToleranceSpecification a owl:Class ;
+    rdfs:label "Coaxiality Tolerance Specification"@en ;
+    skos:prefLabel "Coaxiality tolerance specification"@en ;
+    rdfs:comment "Prescribes axis relation control."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        :PositionToleranceSpecification,
+        [ a owl:Restriction ; owl:onProperty :specifies_characteristic ; owl:someValuesFrom :CoaxialityDeviation ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :DatumAxis ],
+        [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :TolerancedFeature ] .
+
+:CollectionOperation a owl:Class ;
+    rdfs:label "Collection Operation"@en ;
+    skos:prefLabel "Collection operation"@en ;
+    rdfs:comment "Collection is explicitly one of the six operations."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015>,
+        [ a owl:Restriction ; owl:onProperty :part_of ; owl:someValuesFrom :GeometricalIdentificationProcess ],
+        [ a owl:Restriction ; owl:onProperty :has_participant ; owl:someValuesFrom :NonIdealGeometricElement ],
+        [ a owl:Restriction ; owl:onProperty :has_output ; owl:someValuesFrom :NonIdealGeometricElement ] .
+
+:ConformityCondition a owl:Class ;
+    rdfs:label "Conformity Condition"@en ;
+    skos:prefLabel "Conformity condition"@en ;
+    rdfs:comment "It is the expressed inequality/limit imposed on the characteristic."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        [ a owl:Restriction ; owl:onProperty :constrains ; owl:someValuesFrom :GeometricalCharacteristic ],
+        [ a owl:Restriction ; owl:onProperty :part_of ; owl:someValuesFrom :GeometricalSpecification ],
+        [ a owl:Restriction ; owl:onProperty :evaluated_by ; owl:someValuesFrom :VerificationProcess ] .
+
+:ConstructionOperation a owl:Class ;
+    rdfs:label "Construction Operation"@en ;
+    skos:prefLabel "Construction operation"@en ;
+    rdfs:comment "Construction builds ideal element(s) from other ideal elements under constraints."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015>,
+        [ a owl:Restriction ; owl:onProperty :part_of ; owl:someValuesFrom :GeometricalIdentificationProcess ],
+        [ a owl:Restriction ; owl:onProperty :has_participant ; owl:someValuesFrom :AssociatedGeometricElement ],
+        [ a owl:Restriction ; owl:onProperty :has_output ; owl:someValuesFrom :ExactGeometricElement ],
+        [ a owl:Restriction ; owl:onProperty :has_output ; owl:someValuesFrom :CorrectedGeometricElement ],
+        [ a owl:Restriction ; owl:onProperty :has_output ; owl:someValuesFrom :MedianPlane ],
+        [ a owl:Restriction ; owl:onProperty :has_output ; owl:someValuesFrom :MedianLine ] .
+
+:ContinuousFeatureSymbol a owl:Class ;
+    rdfs:label "Continuous Feature Symbol"@en ;
+    skos:prefLabel "Continuous feature symbol"@en ;
+    rdfs:comment "A symbolic indicator that grouped features are treated as one."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :FeatureOfSize ],
+        [ a owl:Restriction ; owl:onProperty :part_of ; owl:someValuesFrom :FeatureControlFrame ] .
+
+:CorrectedGeometricElement a owl:Class ;
+    rdfs:label "Corrected Geometric Element"@en ;
+    skos:prefLabel "Corrected element"@en ;
+    rdfs:comment "The Corrected element is an ideal element introduced for evaluation."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000141>,
+        [ a owl:Restriction ; owl:onProperty :derived_from ; owl:someValuesFrom :AssociatedGeometricElement ],
+        [ a owl:Restriction ; owl:onProperty :output_of ; owl:someValuesFrom :ConstructionOperation ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :GeometricalCharacteristic ] .
+
+:CylindricalToleranceZone a owl:Class ;
+    rdfs:label "Cylindrical Tolerance Zone"@en ;
+    skos:prefLabel "Cylindrical tolerance zone"@en ;
+    rdfs:comment "Used for straightness of an axis and position of an axis."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000141>,
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :StraightnessToleranceSpecification ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :CylindricityToleranceSpecification ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :LocalizationToleranceSpecification ] .
+
+:CylindricityDeviation a owl:Class ;
+    rdfs:label "Cylindricity Deviation"@en ;
+    skos:prefLabel "Cylindricity deviation"@en ;
+    rdfs:comment "Defined relative to an associated ideal cylinder."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000145>,
+        [ a owl:Restriction ; owl:onProperty :inheres_in ; owl:someValuesFrom :TolerancedFeature ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :AssociatedCylinder ],
+        [ a owl:Restriction ; owl:onProperty :specified_by ; owl:someValuesFrom :CylindricityToleranceSpecification ],
+        [ a owl:Restriction ; owl:onProperty :evaluated_by ; owl:someValuesFrom :MeasurementProcess ] .
+
+:CylindricityToleranceSpecification a owl:Class ;
+    rdfs:label "Cylindricity Tolerance Specification"@en ;
+    skos:prefLabel "Cylindricity tolerance specification"@en ;
+    rdfs:comment "Same logic for cylindricity."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        :FormToleranceSpecification,
+        [ a owl:Restriction ; owl:onProperty :specifies_characteristic ; owl:someValuesFrom :CylindricityDeviation ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :CylindricalToleranceZone ],
+        [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :TolerancedFeature ] .
+
+:DatumAxis a owl:Class ;
+    rdfs:label "Datum Axis"@en ;
+    skos:prefLabel "Datum axis"@en ;
+    rdfs:comment "A datum axis is a theoretical linear reference."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000026>,
+        [ a owl:Restriction ; owl:onProperty :derived_from ; owl:someValuesFrom :DatumFeature ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :DatumReferenceSpecification ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :CoaxialityDeviation ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :CircularRunoutValue ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :TotalRunoutValue ] .
+
+:DatumFeature a owl:Class ;
+    rdfs:label "Datum Feature"@en ;
+    skos:prefLabel "Datum feature"@en ;
+    rdfs:comment "A datum feature is a real physical surface/feature chosen as reference; datums are derived from datum features."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024>,
+        [ a owl:Restriction ; owl:onProperty :part_of ; owl:someValuesFrom :Part ],
+        [ a owl:Restriction ; owl:onProperty :derives ; owl:someValuesFrom :DatumPoint ],
+        [ a owl:Restriction ; owl:onProperty :derives ; owl:someValuesFrom :DatumAxis ],
+        [ a owl:Restriction ; owl:onProperty :derives ; owl:someValuesFrom :DatumPlane ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :DatumReferenceSpecification ] .
+
+:DatumPlane a owl:Class ;
+    rdfs:label "Datum Plane"@en ;
+    skos:prefLabel "Datum plane"@en ;
+    rdfs:comment "A datum plane is a theoretical planar reference."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000009>,
+        [ a owl:Restriction ; owl:onProperty :derived_from ; owl:someValuesFrom :DatumFeature ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :DatumReferenceSpecification ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :ParallelismDeviation ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :PerpendicularityDeviation ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :AngularityDeviation ] .
+
+:DatumPoint a owl:Class ;
+    rdfs:label "Datum Point"@en ;
+    skos:prefLabel "Datum point"@en ;
+    rdfs:comment "A datum point is a theoretical point reference."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000018>,
+        [ a owl:Restriction ; owl:onProperty :derived_from ; owl:someValuesFrom :DatumFeature ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :DatumReferenceSpecification ] .
+
+:DatumReferenceFrameSpecification a owl:Class ;
+    rdfs:label "Datum Reference Frame Specification"@en ;
+    skos:prefLabel "Datum reference frame specification"@en ;
+    rdfs:comment "The datum frame is a specified reference system for manufacture/inspection."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        [ a owl:Restriction ; owl:onProperty :has_part ; owl:someValuesFrom :DatumReferenceSpecification ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :PositionToleranceSpecification ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :PositionError ] .
+
+:DatumReferenceSpecification a owl:Class ;
+    rdfs:label "Datum Reference Specification"@en ;
+    skos:prefLabel "Datum reference specification"@en ;
+    rdfs:comment "The ordered datum reference (A, B, C...) is prescribed symbolic information."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :DatumFeature ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :DatumPoint ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :DatumAxis ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :DatumPlane ],
+        [ a owl:Restriction ; owl:onProperty :part_of ; owl:someValuesFrom :DatumReferenceFrameSpecification ],
+        [ a owl:Restriction ; owl:onProperty :part_of ; owl:someValuesFrom :FeatureControlFrame ] .
+
+:DimensionSpecification a owl:Class ;
+    rdfs:label "Dimension Specification"@en ;
+    skos:prefLabel "Dimension specification"@en ;
+    rdfs:comment "Nominal dimension belongs to the definition, not to the real part."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        :GeometricalSpecification,
+        [ a owl:Restriction ; owl:onProperty :specifies_characteristic ; owl:someValuesFrom :LocalSize ],
+        [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :FeatureOfSize ] .
+
+:EnvelopeRequirement a owl:Class ;
+    rdfs:label "Envelope Requirement"@en ;
+    skos:prefLabel "Envelope requirement"@en ;
+    rdfs:comment "The envelope principle is a rule/requirement, not a physical thing."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :FeatureOfSize ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :AssociatedCylinder ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :MaximumMaterialCondition ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :FeatureControlFrame ] .
+
+:ExactGeometricElement a owl:Class ;
+    rdfs:label "Exact Geometric Element"@en ;
+    skos:prefLabel "Exact geometric element"@en ;
+    rdfs:comment "The Exact theoretical element is an ideal geometric referent, not a material entity."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000141>,
+        [ a owl:Restriction ; owl:onProperty :derived_from ; owl:someValuesFrom :AssociatedGeometricElement ],
+        [ a owl:Restriction ; owl:onProperty :output_of ; owl:someValuesFrom :ConstructionOperation ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :PositionError ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :GeometricalSpecification ] .
+
+:ExtractionOperation a owl:Class ;
+    rdfs:label "Extraction Operation"@en ;
+    skos:prefLabel "Extraction operation"@en ;
+    rdfs:comment "Extraction is one of the six GPS operations."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015>,
+        [ a owl:Restriction ; owl:onProperty :part_of ; owl:someValuesFrom :GeometricalIdentificationProcess ],
+        [ a owl:Restriction ; owl:onProperty :has_participant ; owl:someValuesFrom :NonIdealGeometricElement ],
+        [ a owl:Restriction ; owl:onProperty :has_output ; owl:someValuesFrom :AssociatedPoint ] .
+
+:FeatureControlFrame a owl:Class ;
+    rdfs:label "Feature Control Frame"@en ;
+    skos:prefLabel "Feature control frame"@en ;
+    rdfs:comment "A symbolic information structure on the drawing."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        [ a owl:Restriction ; owl:onProperty :has_part ; owl:someValuesFrom :ToleranceSpecification ],
+        [ a owl:Restriction ; owl:onProperty :has_part ; owl:someValuesFrom :DatumReferenceSpecification ],
+        [ a owl:Restriction ; owl:onProperty :has_part ; owl:someValuesFrom :MaximumMaterialConditionModifier ],
+        [ a owl:Restriction ; owl:onProperty :has_part ; owl:someValuesFrom :LeastMaterialConditionModifier ],
+        [ a owl:Restriction ; owl:onProperty :has_part ; owl:someValuesFrom :BasicDimension ] .
+
+:FeatureOfSize a owl:Class ;
+    rdfs:label "Feature Of Size"@en ;
+    skos:prefLabel "Feature of size"@en ;
+    rdfs:comment "A FOS is a real part feature with measurable size, such as a hole, slot, pin, or tab."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024>,
+        [ a owl:Restriction ; owl:onProperty :part_of ; owl:someValuesFrom :Part ],
+        [ a owl:Restriction ; owl:onProperty :bearer_of ; owl:someValuesFrom :LocalSize ],
+        [ a owl:Restriction ; owl:onProperty :bearer_of ; owl:someValuesFrom :ActualDiameter ],
+        [ a owl:Restriction ; owl:onProperty :bearer_of ; owl:someValuesFrom :MaximumMaterialCondition ],
+        [ a owl:Restriction ; owl:onProperty :bearer_of ; owl:someValuesFrom :LeastMaterialCondition ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :EnvelopeRequirement ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :ContinuousFeatureSymbol ] .
+
+:FilteringOperation a owl:Class ;
+    rdfs:label "Filtering Operation"@en ;
+    skos:prefLabel "Filtering operation"@en ;
+    rdfs:comment "Filtering is one of the six GPS operations."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015>,
+        [ a owl:Restriction ; owl:onProperty :part_of ; owl:someValuesFrom :GeometricalIdentificationProcess ],
+        [ a owl:Restriction ; owl:onProperty :has_participant ; owl:someValuesFrom :NonIdealGeometricElement ],
+        [ a owl:Restriction ; owl:onProperty :has_output ; owl:someValuesFrom :NonIdealGeometricElement ] .
+
+:FlatnessDeviation a owl:Class ;
+    rdfs:label "Flatness Deviation"@en ;
+    skos:prefLabel "Flatness deviation"@en ;
+    rdfs:comment "Defined by the relation between a real surface and an associated plane."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000145>,
+        [ a owl:Restriction ; owl:onProperty :inheres_in ; owl:someValuesFrom :TolerancedFeature ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :AssociatedPlane ],
+        [ a owl:Restriction ; owl:onProperty :specified_by ; owl:someValuesFrom :FlatnessToleranceSpecification ],
+        [ a owl:Restriction ; owl:onProperty :evaluated_by ; owl:someValuesFrom :MeasurementProcess ] .
+
+:FlatnessToleranceSpecification a owl:Class ;
+    rdfs:label "Flatness Tolerance Specification"@en ;
+    skos:prefLabel "Flatness tolerance specification"@en ;
+    rdfs:comment "The flatness callout is a specification."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        :FormToleranceSpecification,
+        [ a owl:Restriction ; owl:onProperty :specifies_characteristic ; owl:someValuesFrom :FlatnessDeviation ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :PlanarToleranceZone ],
+        [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :TolerancedFeature ] .
+
+:FormToleranceSpecification a owl:Class ;
+    rdfs:label "Form Tolerance Specification"@en ;
+    skos:prefLabel "Form tolerance specification"@en ;
+    rdfs:comment "Flatness, straightness, circularity, cylindricity are prescriptive controls."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        :ToleranceSpecification,
+        [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :TolerancedFeature ] .
+
+:GeometricalCharacteristic a owl:Class ;
+    rdfs:label "Geometrical Characteristic"@en ;
+    skos:prefLabel "Geometrical characteristic"@en ;
+    rdfs:comment "In GPS, the characteristic is the quantified magnitude on which conformity depends."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019>,
+        [ a owl:Restriction ; owl:onProperty :inheres_in ; owl:someValuesFrom :TolerancedFeature ],
+        [ a owl:Restriction ; owl:onProperty :specified_by ; owl:someValuesFrom :GeometricalSpecification ],
+        [ a owl:Restriction ; owl:onProperty :evaluated_by ; owl:someValuesFrom :MeasurementProcess ],
+        [ a owl:Restriction ; owl:onProperty :evaluated_by ; owl:someValuesFrom :VerificationProcess ] .
+
+:GeometricalIdentificationProcess a owl:Class ;
+    rdfs:label "Geometrical Identification Process"@en ;
+    skos:prefLabel "Geometrical identification process"@en ;
+    rdfs:comment "GPS says geometric elements are identified by operations."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015>,
+        [ a owl:Restriction ; owl:onProperty :has_part ; owl:someValuesFrom :PartitionOperation ],
+        [ a owl:Restriction ; owl:onProperty :has_part ; owl:someValuesFrom :ExtractionOperation ],
+        [ a owl:Restriction ; owl:onProperty :has_part ; owl:someValuesFrom :FilteringOperation ],
+        [ a owl:Restriction ; owl:onProperty :has_part ; owl:someValuesFrom :CollectionOperation ],
+        [ a owl:Restriction ; owl:onProperty :has_part ; owl:someValuesFrom :AssociationOperation ],
+        [ a owl:Restriction ; owl:onProperty :has_part ; owl:someValuesFrom :ConstructionOperation ],
+        [ a owl:Restriction ; owl:onProperty :has_participant ; owl:someValuesFrom :SkinModelSurface ],
+        [ a owl:Restriction ; owl:onProperty :has_output ; owl:someValuesFrom :NonIdealGeometricElement ],
+        [ a owl:Restriction ; owl:onProperty :has_output ; owl:someValuesFrom :IdealGeometricElement ] .
+
+:GeometricalSpecification a owl:Class ;
+    rdfs:label "Geometrical Specification"@en ;
+    skos:prefLabel "Geometrical specification"@en ;
+    rdfs:comment "A specification is prescriptive information, not a physical property of the part."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :TolerancedFeature ],
+        [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :Assembly ],
+        [ a owl:Restriction ; owl:onProperty :specifies_characteristic ; owl:someValuesFrom :GeometricalCharacteristic ],
+        [ a owl:Restriction ; owl:onProperty :has_part ; owl:someValuesFrom :ConformityCondition ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :DatumReferenceSpecification ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :ToleranceZone ] .
+
+:IdealGeometricElement a owl:Class ;
+    rdfs:label "Ideal Geometric Element"@en ;
+    skos:prefLabel "Ideal geometric element"@en ;
+    rdfs:comment "Ideal elements are equation-based and not material."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000141>,
+        [ a owl:Restriction ; owl:onProperty :derived_from ; owl:someValuesFrom :NonIdealGeometricElement ],
+        [ a owl:Restriction ; owl:onProperty :output_of ; owl:someValuesFrom :AssociationOperation ],
+        [ a owl:Restriction ; owl:onProperty :output_of ; owl:someValuesFrom :ConstructionOperation ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :GeometricalSpecification ] .
+
+:InspectionProcess a owl:Class ;
+    rdfs:label "Inspection Process"@en ;
+    skos:prefLabel "Inspection process"@en ;
+    rdfs:comment "Inspection is an activity of verification/metrology."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015>,
+        [ a owl:Restriction ; owl:onProperty :has_participant ; owl:someValuesFrom :Part ],
+        [ a owl:Restriction ; owl:onProperty :has_participant ; owl:someValuesFrom :Assembly ],
+        [ a owl:Restriction ; owl:onProperty :evaluates ; owl:someValuesFrom :ToleranceSpecification ],
+        [ a owl:Restriction ; owl:onProperty :evaluates ; owl:someValuesFrom :CircularRunoutValue ],
+        [ a owl:Restriction ; owl:onProperty :evaluates ; owl:someValuesFrom :TotalRunoutValue ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :DatumAxis ] .
+
+:LeastMaterialCondition a owl:Class ;
+    rdfs:label "Least Material Condition"@en ;
+    skos:prefLabel "Least material condition"@en ;
+    rdfs:comment "As a state of a real feature of size, LMC is the condition of minimum material amount."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019>,
+        [ a owl:Restriction ; owl:onProperty :inheres_in ; owl:someValuesFrom :FeatureOfSize ],
+        [ a owl:Restriction ; owl:onProperty :is_about ; owl:someValuesFrom :LeastMaterialConditionModifier ] .
+
+:LeastMaterialConditionModifier a owl:Class ;
+    rdfs:label "Least Material Condition Modifier"@en ;
+    skos:prefLabel "Least material condition modifier"@en ;
+    rdfs:comment "Same logic for the symbol L."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        [ a owl:Restriction ; owl:onProperty :is_about ; owl:someValuesFrom :LeastMaterialCondition ],
+        [ a owl:Restriction ; owl:onProperty :part_of ; owl:someValuesFrom :FeatureControlFrame ],
+        [ a owl:Restriction ; owl:onProperty :part_of ; owl:someValuesFrom :ToleranceSpecification ] .
+
+:LocalSize a owl:Class ;
+    rdfs:label "Local Size"@en ;
+    skos:prefLabel "Local size"@en ;
+    rdfs:comment "It is an actual measurable size borne by the part/feature."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019>,
+        [ a owl:Restriction ; owl:onProperty :inheres_in ; owl:someValuesFrom :FeatureOfSize ],
+        [ a owl:Restriction ; owl:onProperty :specified_by ; owl:someValuesFrom :DimensionSpecification ],
+        [ a owl:Restriction ; owl:onProperty :evaluated_by ; owl:someValuesFrom :MeasurementProcess ] .
+
+:LocalizationToleranceSpecification a owl:Class ;
+    rdfs:label "Localization Tolerance Specification"@en ;
+    skos:prefLabel "Localization tolerance specification"@en ;
+    rdfs:comment "Prescribes a location zone relative to references."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        :PositionToleranceSpecification,
+        [ a owl:Restriction ; owl:onProperty :specifies_characteristic ; owl:someValuesFrom :PositionError ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :DatumReferenceFrameSpecification ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :CylindricalToleranceZone ],
+        [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :TolerancedFeature ],
+        [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :Assembly ] .
+
+:MaximumMaterialCondition a owl:Class ;
+    rdfs:label "Maximum Material Condition"@en ;
+    skos:prefLabel "Maximum material condition"@en ;
+    rdfs:comment "As a state of a real feature of size, MMC is the condition of maximum material amount."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019>,
+        [ a owl:Restriction ; owl:onProperty :inheres_in ; owl:someValuesFrom :FeatureOfSize ],
+        [ a owl:Restriction ; owl:onProperty :is_about ; owl:someValuesFrom :MaximumMaterialConditionModifier ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :EnvelopeRequirement ] .
+
+:MaximumMaterialConditionModifier a owl:Class ;
+    rdfs:label "Maximum Material Condition Modifier"@en ;
+    skos:prefLabel "Maximum material condition modifier"@en ;
+    rdfs:comment "The symbol M is part of the specification language, not the actual material state."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        [ a owl:Restriction ; owl:onProperty :is_about ; owl:someValuesFrom :MaximumMaterialCondition ],
+        [ a owl:Restriction ; owl:onProperty :part_of ; owl:someValuesFrom :FeatureControlFrame ],
+        [ a owl:Restriction ; owl:onProperty :part_of ; owl:someValuesFrom :ToleranceSpecification ] .
+
+:MeasurementProcess a owl:Class ;
+    rdfs:label "Measurement Process"@en ;
+    skos:prefLabel "Measurement process"@en ;
+    rdfs:comment "Measurement is an occurrent, not a quality or specification."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015>,
+        [ a owl:Restriction ; owl:onProperty :has_participant ; owl:someValuesFrom :Part ],
+        [ a owl:Restriction ; owl:onProperty :has_participant ; owl:someValuesFrom :TolerancedFeature ],
+        [ a owl:Restriction ; owl:onProperty :evaluates ; owl:someValuesFrom :GeometricalCharacteristic ],
+        [ a owl:Restriction ; owl:onProperty :has_output ; owl:someValuesFrom :GeometricalCharacteristic ] .
+
+:MedianLine a owl:Class ;
+    rdfs:label "Median Line"@en ;
+    skos:prefLabel "Median line"@en ;
+    rdfs:comment "A median line is an ideal 1D construction."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000026>,
+        [ a owl:Restriction ; owl:onProperty :derived_from ; owl:someValuesFrom :AssociatedLine ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :GeometricalCharacteristic ] .
+
+:MedianPlane a owl:Class ;
+    rdfs:label "Median Plane"@en ;
+    skos:prefLabel "Median plane"@en ;
+    rdfs:comment "A median plane is an ideal constructed plane."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000009>,
+        [ a owl:Restriction ; owl:onProperty :derived_from ; owl:someValuesFrom :AssociatedPlane ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :SymmetryDeviation ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :SymmetryToleranceSpecification ] .
+
+:NominalDiameterSpecification a owl:Class ;
+    rdfs:label "Nominal Diameter Specification"@en ;
+    skos:prefLabel "Nominal diameter specification"@en ;
+    rdfs:comment "A prescribed nominal value, not a borne property of the part."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        :DimensionSpecification,
+        [ a owl:Restriction ; owl:onProperty :specifies_characteristic ; owl:someValuesFrom :ActualDiameter ],
+        [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :FeatureOfSize ] .
+
+:NominalLengthSpecification a owl:Class ;
+    rdfs:label "Nominal Length Specification"@en ;
+    skos:prefLabel "Nominal length specification"@en ;
+    rdfs:comment "A target value in the design definition."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        :DimensionSpecification,
+        [ a owl:Restriction ; owl:onProperty :specifies_characteristic ; owl:someValuesFrom :ActualLength ],
+        [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :Part ] .
+
+:NonIdealGeometricElement a owl:Class ;
+    rdfs:label "Non Ideal Geometric Element"@en ;
+    skos:prefLabel "Non-ideal geometric element"@en ;
+    rdfs:comment "In the GPS paper, non-ideal elements depend totally on the real surface of the part."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024>,
+        [ a owl:Restriction ; owl:onProperty :part_of ; owl:someValuesFrom :Part ],
+        [ a owl:Restriction ; owl:onProperty :derived_from ; owl:someValuesFrom :SkinModelSurface ],
+        [ a owl:Restriction ; owl:onProperty :input_to ; owl:someValuesFrom :AssociationOperation ],
+        [ a owl:Restriction ; owl:onProperty :input_to ; owl:someValuesFrom :ExtractionOperation ],
+        [ a owl:Restriction ; owl:onProperty :input_to ; owl:someValuesFrom :FilteringOperation ],
+        [ a owl:Restriction ; owl:onProperty :input_to ; owl:someValuesFrom :CollectionOperation ] .
+
+:OrientationToleranceSpecification a owl:Class ;
+    rdfs:label "Orientation Tolerance Specification"@en ;
+    skos:prefLabel "Orientation tolerance specification"@en ;
+    rdfs:comment "Parallelism, perpendicularity, angularity are prescriptive controls."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        :ToleranceSpecification,
+        [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :TolerancedFeature ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :DatumReferenceSpecification ] .
+
+:ParallelismDeviation a owl:Class ;
+    rdfs:label "Parallelism Deviation"@en ;
+    skos:prefLabel "Parallelism deviation"@en ;
+    rdfs:comment "Defined relative to a datum-derived reference plane/axis."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000145>,
+        [ a owl:Restriction ; owl:onProperty :inheres_in ; owl:someValuesFrom :TolerancedFeature ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :DatumPlane ],
+        [ a owl:Restriction ; owl:onProperty :specified_by ; owl:someValuesFrom :ParallelismToleranceSpecification ],
+        [ a owl:Restriction ; owl:onProperty :evaluated_by ; owl:someValuesFrom :MeasurementProcess ] .
+
+:ParallelismToleranceSpecification a owl:Class ;
+    rdfs:label "Parallelism Tolerance Specification"@en ;
+    skos:prefLabel "Parallelism tolerance specification"@en ;
+    rdfs:comment "Same logic for parallelism."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        :OrientationToleranceSpecification,
+        [ a owl:Restriction ; owl:onProperty :specifies_characteristic ; owl:someValuesFrom :ParallelismDeviation ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :DatumReferenceSpecification ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :PlanarToleranceZone ],
+        [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :TolerancedFeature ] .
+
+:Part a owl:Class ;
+    rdfs:label "Part"@en ;
+    skos:prefLabel "Part"@en ;
+    rdfs:comment "A manufactured part is a single material entity; the GPS paper discusses specifications on isolated parts."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030>,
+        [ a owl:Restriction ; owl:onProperty :has_part ; owl:someValuesFrom :TolerancedFeature ],
+        [ a owl:Restriction ; owl:onProperty :has_part ; owl:someValuesFrom :DatumFeature ],
+        [ a owl:Restriction ; owl:onProperty :has_part ; owl:someValuesFrom :ReferenceSurface ],
+        [ a owl:Restriction ; owl:onProperty :has_part ; owl:someValuesFrom :SurfacePortion ],
+        [ a owl:Restriction ; owl:onProperty :has_part ; owl:someValuesFrom :FeatureOfSize ],
+        [ a owl:Restriction ; owl:onProperty :has_part ; owl:someValuesFrom :NonIdealGeometricElement ],
+        [ a owl:Restriction ; owl:onProperty :has_part ; owl:someValuesFrom :SkinModelSurface ],
+        [ a owl:Restriction ; owl:onProperty :part_of ; owl:someValuesFrom :Assembly ] .
+
+:PartitionOperation a owl:Class ;
+    rdfs:label "Partition Operation"@en ;
+    skos:prefLabel "Partition operation"@en ;
+    rdfs:comment "Partition is one of the six GPS operations."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015>,
+        [ a owl:Restriction ; owl:onProperty :part_of ; owl:someValuesFrom :GeometricalIdentificationProcess ],
+        [ a owl:Restriction ; owl:onProperty :has_participant ; owl:someValuesFrom :SkinModelSurface ],
+        [ a owl:Restriction ; owl:onProperty :has_output ; owl:someValuesFrom :NonIdealGeometricElement ] .
+
+:PerpendicularityDeviation a owl:Class ;
+    rdfs:label "Perpendicularity Deviation"@en ;
+    skos:prefLabel "Perpendicularity deviation"@en ;
+    rdfs:comment "Defined relative to a datum plane/axis at 90 degrees."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000145>,
+        [ a owl:Restriction ; owl:onProperty :inheres_in ; owl:someValuesFrom :TolerancedFeature ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :DatumPlane ],
+        [ a owl:Restriction ; owl:onProperty :specified_by ; owl:someValuesFrom :PerpendicularityToleranceSpecification ],
+        [ a owl:Restriction ; owl:onProperty :evaluated_by ; owl:someValuesFrom :MeasurementProcess ] .
+
+:PerpendicularityToleranceSpecification a owl:Class ;
+    rdfs:label "Perpendicularity Tolerance Specification"@en ;
+    skos:prefLabel "Perpendicularity tolerance specification"@en ;
+    rdfs:comment "Same logic for perpendicularity."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        :OrientationToleranceSpecification,
+        [ a owl:Restriction ; owl:onProperty :specifies_characteristic ; owl:someValuesFrom :PerpendicularityDeviation ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :DatumReferenceSpecification ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :PlanarToleranceZone ],
+        [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :TolerancedFeature ] .
+
+:PlanarToleranceZone a owl:Class ;
+    rdfs:label "Planar Tolerance Zone"@en ;
+    skos:prefLabel "Planar tolerance zone"@en ;
+    rdfs:comment "Used for flatness, perpendicularity, parallelism, etc."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000141>,
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :FlatnessToleranceSpecification ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :ParallelismToleranceSpecification ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :PerpendicularityToleranceSpecification ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :AngularityToleranceSpecification ] .
+
+:PositionError a owl:Class ;
+    rdfs:label "Position Error"@en ;
+    skos:prefLabel "Position error"@en ;
+    rdfs:comment "Defined relative to an exact constructed location or datum reference frame."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000145>,
+        [ a owl:Restriction ; owl:onProperty :inheres_in ; owl:someValuesFrom :TolerancedFeature ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :ExactGeometricElement ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :DatumReferenceFrameSpecification ],
+        [ a owl:Restriction ; owl:onProperty :specified_by ; owl:someValuesFrom :PositionToleranceSpecification ],
+        [ a owl:Restriction ; owl:onProperty :specified_by ; owl:someValuesFrom :LocalizationToleranceSpecification ],
+        [ a owl:Restriction ; owl:onProperty :evaluated_by ; owl:someValuesFrom :MeasurementProcess ] .
+
+:PositionToleranceSpecification a owl:Class ;
+    rdfs:label "Position Tolerance Specification"@en ;
+    skos:prefLabel "Position tolerance specification"@en ;
+    rdfs:comment "Position/location controls are prescribed, not qualities themselves."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        :ToleranceSpecification,
+        [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :TolerancedFeature ],
+        [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :Assembly ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :DatumReferenceFrameSpecification ] .
+
+:ReferenceSurface a owl:Class ;
+    rdfs:label "Reference Surface"@en ;
+    skos:prefLabel "Reference surface"@en ;
+    rdfs:comment "A reference surface is a selected real surface region on the part."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024>,
+        [ a owl:Restriction ; owl:onProperty :part_of ; owl:someValuesFrom :Part ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :DatumReferenceSpecification ],
+        [ a owl:Restriction ; owl:onProperty :bearer_of ; owl:someValuesFrom :SurfaceRoughness ] .
+
+:RunoutToleranceSpecification a owl:Class ;
+    rdfs:label "Runout Tolerance Specification"@en ;
+    skos:prefLabel "Runout tolerance specification"@en ;
+    rdfs:comment "Circular and total runout are specified controls."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        :ToleranceSpecification,
+        [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :TolerancedFeature ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :DatumAxis ] .
+
+:SkinModelSurface a owl:Class ;
+    rdfs:label "Skin Model Surface"@en ;
+    skos:prefLabel "Skin model surface"@en ;
+    rdfs:comment "If used for the real surface as modeled in GPS, it remains tied to the real material part."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024>,
+        [ a owl:Restriction ; owl:onProperty :part_of ; owl:someValuesFrom :Part ],
+        [ a owl:Restriction ; owl:onProperty :input_to ; owl:someValuesFrom :PartitionOperation ],
+        [ a owl:Restriction ; owl:onProperty :source_for ; owl:someValuesFrom :NonIdealGeometricElement ] .
+
+:StraightnessDeviation a owl:Class ;
+    rdfs:label "Straightness Deviation"@en ;
+    skos:prefLabel "Straightness deviation"@en ;
+    rdfs:comment "Defined relative to an associated ideal line."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000145>,
+        [ a owl:Restriction ; owl:onProperty :inheres_in ; owl:someValuesFrom :TolerancedFeature ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :AssociatedLine ],
+        [ a owl:Restriction ; owl:onProperty :specified_by ; owl:someValuesFrom :StraightnessToleranceSpecification ],
+        [ a owl:Restriction ; owl:onProperty :evaluated_by ; owl:someValuesFrom :MeasurementProcess ] .
+
+:StraightnessToleranceSpecification a owl:Class ;
+    rdfs:label "Straightness Tolerance Specification"@en ;
+    skos:prefLabel "Straightness tolerance specification"@en ;
+    rdfs:comment "Same logic for straightness."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        :FormToleranceSpecification,
+        [ a owl:Restriction ; owl:onProperty :specifies_characteristic ; owl:someValuesFrom :StraightnessDeviation ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :CylindricalToleranceZone ],
+        [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :TolerancedFeature ] .
+
+:SurfaceFinishSpecification a owl:Class ;
+    rdfs:label "Surface Finish Specification"@en ;
+    skos:prefLabel "Surface finish specification"@en ;
+    rdfs:comment "Surface finish callout is a requirement on the drawing/model."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :SurfacePortion ],
+        [ a owl:Restriction ; owl:onProperty :specifies_characteristic ; owl:someValuesFrom :SurfaceRoughness ] .
+
+:SurfacePortion a owl:Class ;
+    rdfs:label "Surface Portion"@en ;
+    skos:prefLabel "Surface portion"@en ;
+    rdfs:comment "A bounded surface patch on a real part is best modeled as a fiat part."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024>,
+        [ a owl:Restriction ; owl:onProperty :part_of ; owl:someValuesFrom :Part ],
+        [ a owl:Restriction ; owl:onProperty :bearer_of ; owl:someValuesFrom :SurfaceRoughness ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :SurfaceFinishSpecification ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :BetweenSymbolSpecification ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :AllAroundSpecification ] .
+
+:SurfaceRoughness a owl:Class ;
+    rdfs:label "Surface Roughness"@en ;
+    skos:prefLabel "Surface roughness"@en ;
+    rdfs:comment "Roughness is a real state of the surface."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019>,
+        [ a owl:Restriction ; owl:onProperty :inheres_in ; owl:someValuesFrom :SurfacePortion ],
+        [ a owl:Restriction ; owl:onProperty :specified_by ; owl:someValuesFrom :SurfaceFinishSpecification ],
+        [ a owl:Restriction ; owl:onProperty :evaluated_by ; owl:someValuesFrom :MeasurementProcess ] .
+
+:SymmetryDeviation a owl:Class ;
+    rdfs:label "Symmetry Deviation"@en ;
+    skos:prefLabel "Symmetry deviation"@en ;
+    rdfs:comment "Defined relative to a median plane derived from datum-related planes."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000145>,
+        [ a owl:Restriction ; owl:onProperty :inheres_in ; owl:someValuesFrom :TolerancedFeature ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :MedianPlane ],
+        [ a owl:Restriction ; owl:onProperty :specified_by ; owl:someValuesFrom :SymmetryToleranceSpecification ],
+        [ a owl:Restriction ; owl:onProperty :evaluated_by ; owl:someValuesFrom :MeasurementProcess ] .
+
+:SymmetryToleranceSpecification a owl:Class ;
+    rdfs:label "Symmetry Tolerance Specification"@en ;
+    skos:prefLabel "Symmetry tolerance specification"@en ;
+    rdfs:comment "Prescribes symmetry relative to a median reference."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        :PositionToleranceSpecification,
+        [ a owl:Restriction ; owl:onProperty :specifies_characteristic ; owl:someValuesFrom :SymmetryDeviation ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :MedianPlane ],
+        [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :TolerancedFeature ] .
+
+:TargetAngleSpecification a owl:Class ;
+    rdfs:label "Target Angle Specification"@en ;
+    skos:prefLabel "Target angle specification"@en ;
+    rdfs:comment "An exact specified angle used in design."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        :DimensionSpecification,
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :DatumReferenceSpecification ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :AngularityToleranceSpecification ] .
+
+:ToleranceSpecification a owl:Class ;
+    rdfs:label "Tolerance Specification"@en ;
+    skos:prefLabel "Tolerance specification"@en ;
+    rdfs:comment "A tolerance is an allowable variation statement."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        :GeometricalSpecification,
+        [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :TolerancedFeature ],
+        [ a owl:Restriction ; owl:onProperty :has_part ; owl:someValuesFrom :ConformityCondition ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :ToleranceZone ] .
+
+:ToleranceZone a owl:Class ;
+    rdfs:label "Tolerance Zone"@en ;
+    skos:prefLabel "Tolerance zone"@en ;
+    rdfs:comment "A tolerance zone is a geometric region, not a material portion."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000141>,
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :ToleranceSpecification ],
+        [ a owl:Restriction ; owl:onProperty :related_to ; owl:someValuesFrom :TolerancedFeature ] .
+
+:TolerancedFeature a owl:Class ;
+    rdfs:label "Toleranced Feature"@en ;
+    skos:prefLabel "Toleranced feature"@en ;
+    rdfs:comment "A toleranced feature is a selected real portion of the part, not a separate object."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024>,
+        [ a owl:Restriction ; owl:onProperty :part_of ; owl:someValuesFrom :Part ],
+        [ a owl:Restriction ; owl:onProperty :bearer_of ; owl:someValuesFrom :GeometricalCharacteristic ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :GeometricalSpecification ],
+        [ a owl:Restriction ; owl:onProperty :conforms_to ; owl:someValuesFrom :ToleranceZone ] .
+
+:TotalRunoutToleranceSpecification a owl:Class ;
+    rdfs:label "Total Runout Tolerance Specification"@en ;
+    skos:prefLabel "Total runout tolerance specification"@en ;
+    rdfs:comment "Same for total runout."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        :RunoutToleranceSpecification,
+        [ a owl:Restriction ; owl:onProperty :specifies_characteristic ; owl:someValuesFrom :TotalRunoutValue ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :DatumAxis ],
+        [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :TolerancedFeature ] .
+
+:TotalRunoutValue a owl:Class ;
+    rdfs:label "Total Runout Value"@en ;
+    skos:prefLabel "Total runout value"@en ;
+    rdfs:comment "Same logic for the whole surface over 360 degrees."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000145>,
+        [ a owl:Restriction ; owl:onProperty :inheres_in ; owl:someValuesFrom :TolerancedFeature ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :DatumAxis ],
+        [ a owl:Restriction ; owl:onProperty :specified_by ; owl:someValuesFrom :TotalRunoutToleranceSpecification ],
+        [ a owl:Restriction ; owl:onProperty :evaluated_by ; owl:someValuesFrom :InspectionProcess ] .
+
+:VerificationProcess a owl:Class ;
+    rdfs:label "Verification Process"@en ;
+    skos:prefLabel "Verification process"@en ;
+    rdfs:comment "Verification compares measured characteristic to the imposed condition/specification."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015>,
+        [ a owl:Restriction ; owl:onProperty :has_participant ; owl:someValuesFrom :Part ],
+        [ a owl:Restriction ; owl:onProperty :has_participant ; owl:someValuesFrom :Assembly ],
+        [ a owl:Restriction ; owl:onProperty :evaluates ; owl:someValuesFrom :ConformityCondition ],
+        [ a owl:Restriction ; owl:onProperty :evaluates ; owl:someValuesFrom :GeometricalSpecification ],
+        [ a owl:Restriction ; owl:onProperty :evaluates ; owl:someValuesFrom :GeometricalCharacteristic ] .

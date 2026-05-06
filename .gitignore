@@ -1,0 +1,21 @@
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Local IDE settings
+.idea/
+.vscode/
+
+# Python caches and virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Build and temporary outputs
+dist/
+build/
+tmp/
+temp/

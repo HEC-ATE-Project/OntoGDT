@@ -1,0 +1,2877 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:onto="http://example.org/onto-gdt#">
+  <owl:Ontology rdf:about="http://example.org/onto-gdt">
+    <owl:imports rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+    <rdfs:label xml:lang="en">Onto-GDT</rdfs:label>
+    <rdfs:comment xml:lang="en">Ontology generated from suggestions_branchements_onto_gdt.tex tables.</rdfs:comment>
+  </owl:Ontology>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000024">
+    <rdfs:label xml:lang="en">fiat object part</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000031">
+    <rdfs:label xml:lang="en">generically dependent continuant</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000141">
+    <rdfs:label xml:lang="en">immaterial entity</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000030">
+    <rdfs:label xml:lang="en">object</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000027">
+    <rdfs:label xml:lang="en">object aggregate</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000026">
+    <rdfs:label xml:lang="en">one-dimensional spatial region</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000015">
+    <rdfs:label xml:lang="en">process</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000019">
+    <rdfs:label xml:lang="en">quality</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000145">
+    <rdfs:label xml:lang="en">relational quality</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000009">
+    <rdfs:label xml:lang="en">two-dimensional spatial region</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000018">
+    <rdfs:label xml:lang="en">zero-dimensional spatial region</rdfs:label>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="http://example.org/onto-gdt#applies_to">
+    <rdfs:label xml:lang="en">applies to</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/onto-gdt#bearer_of">
+    <rdfs:label xml:lang="en">bearer of</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/onto-gdt#conforms_to">
+    <rdfs:label xml:lang="en">conforms to</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/onto-gdt#constrains">
+    <rdfs:label xml:lang="en">constrains</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/onto-gdt#derived_from">
+    <rdfs:label xml:lang="en">derived from</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/onto-gdt#derives">
+    <rdfs:label xml:lang="en">derives</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/onto-gdt#evaluated_by">
+    <rdfs:label xml:lang="en">evaluated by</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/onto-gdt#evaluates">
+    <rdfs:label xml:lang="en">evaluates</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/onto-gdt#has_output">
+    <rdfs:label xml:lang="en">has output</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/onto-gdt#has_part">
+    <rdfs:label xml:lang="en">has part</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/onto-gdt#has_participant">
+    <rdfs:label xml:lang="en">has participant</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/onto-gdt#inheres_in">
+    <rdfs:label xml:lang="en">inheres in</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/onto-gdt#input_to">
+    <rdfs:label xml:lang="en">input to</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/onto-gdt#is_about">
+    <rdfs:label xml:lang="en">is about</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/onto-gdt#output_of">
+    <rdfs:label xml:lang="en">output of</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/onto-gdt#part_of">
+    <rdfs:label xml:lang="en">part of</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/onto-gdt#referenced_by">
+    <rdfs:label xml:lang="en">referenced by</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/onto-gdt#references">
+    <rdfs:label xml:lang="en">references</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/onto-gdt#related_to">
+    <rdfs:label xml:lang="en">related to</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/onto-gdt#source_for">
+    <rdfs:label xml:lang="en">source for</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/onto-gdt#specified_by">
+    <rdfs:label xml:lang="en">specified by</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/onto-gdt#specifies_characteristic">
+    <rdfs:label xml:lang="en">specifies characteristic</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#ActualDiameter">
+    <rdfs:label xml:lang="en">Actual Diameter</rdfs:label>
+    <skos:prefLabel xml:lang="en">Actual diameter</skos:prefLabel>
+    <rdfs:comment xml:lang="en">A real property of the feature, not of the drawing.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#inheres_in"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#FeatureOfSize"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#evaluated_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#MeasurementProcess"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#ActualLength">
+    <rdfs:label xml:lang="en">Actual Length</rdfs:label>
+    <skos:prefLabel xml:lang="en">Actual length</skos:prefLabel>
+    <rdfs:comment xml:lang="en">A real property of the part.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#inheres_in"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#Part"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#evaluated_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#MeasurementProcess"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#ActualThickness">
+    <rdfs:label xml:lang="en">Actual Thickness</rdfs:label>
+    <skos:prefLabel xml:lang="en">Actual thickness</skos:prefLabel>
+    <rdfs:comment xml:lang="en">A real measurable property of the part.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#inheres_in"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#Part"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#evaluated_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#MeasurementProcess"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#AllAroundSpecification">
+    <rdfs:label xml:lang="en">All Around Specification</rdfs:label>
+    <skos:prefLabel xml:lang="en">All around specification</skos:prefLabel>
+    <rdfs:comment xml:lang="en">A symbolic scope indicator.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#applies_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#SurfacePortion"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#part_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#FeatureControlFrame"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#AllOverSpecification">
+    <rdfs:label xml:lang="en">All Over Specification</rdfs:label>
+    <skos:prefLabel xml:lang="en">All over specification</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Another symbolic scope indicator.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#applies_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#Part"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#part_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#FeatureControlFrame"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#AngularityDeviation">
+    <rdfs:label xml:lang="en">Angularity Deviation</rdfs:label>
+    <skos:prefLabel xml:lang="en">Angularity deviation</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Depends on a specified angular relation to a datum.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000145"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#inheres_in"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumPlane"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#specified_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AngularityToleranceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#evaluated_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#MeasurementProcess"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#AngularityToleranceSpecification">
+    <rdfs:label xml:lang="en">Angularity Tolerance Specification</rdfs:label>
+    <skos:prefLabel xml:lang="en">Angularity tolerance specification</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Same logic for angularity.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/onto-gdt#OrientationToleranceSpecification"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#specifies_characteristic"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AngularityDeviation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumReferenceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TargetAngleSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#PlanarToleranceZone"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#applies_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#AnnularToleranceZone">
+    <rdfs:label xml:lang="en">Annular Tolerance Zone</rdfs:label>
+    <skos:prefLabel xml:lang="en">Annular tolerance zone</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Circularity examples use an annular region between concentric circles.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#CircularityToleranceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#Assembly">
+    <rdfs:label xml:lang="en">Assembly</rdfs:label>
+    <skos:prefLabel xml:lang="en">Assembly</skos:prefLabel>
+    <rdfs:comment xml:lang="en">An assembly is made of several material entities taken together; the GPS fiche is explicitly extended to assemblies.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_part"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#Part"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#applies_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#GeometricalSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_participant"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#InspectionProcess"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_participant"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#VerificationProcess"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#AssociatedCircle">
+    <rdfs:label xml:lang="en">Associated Circle</rdfs:label>
+    <skos:prefLabel xml:lang="en">Associated circle</skos:prefLabel>
+    <rdfs:comment xml:lang="en">BFO top-level has no dedicated circle class; use immaterial entity.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#derived_from"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#NonIdealGeometricElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#output_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AssociationOperation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#CircularityDeviation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#AssociatedCone">
+    <rdfs:label xml:lang="en">Associated Cone</rdfs:label>
+    <skos:prefLabel xml:lang="en">Associated cone</skos:prefLabel>
+    <rdfs:comment xml:lang="en">An ideal cone is immaterial and has no more precise BFO top-level slot.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#derived_from"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#NonIdealGeometricElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#output_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AssociationOperation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#GeometricalCharacteristic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#AssociatedCylinder">
+    <rdfs:label xml:lang="en">Associated Cylinder</rdfs:label>
+    <skos:prefLabel xml:lang="en">Associated cylinder</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Same logic for an ideal cylinder.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#derived_from"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#NonIdealGeometricElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#output_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AssociationOperation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#CylindricityDeviation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#EnvelopeRequirement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#AssociatedGeometricElement">
+    <rdfs:label xml:lang="en">Associated Geometric Element</rdfs:label>
+    <skos:prefLabel xml:lang="en">Associated geometric element</skos:prefLabel>
+    <rdfs:comment xml:lang="en">An associated element is ideal and obtained by association from a non-ideal element.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#derived_from"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#NonIdealGeometricElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#output_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AssociationOperation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#GeometricalCharacteristic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#AssociatedLine">
+    <rdfs:label xml:lang="en">Associated Line</rdfs:label>
+    <skos:prefLabel xml:lang="en">Associated line</skos:prefLabel>
+    <rdfs:comment xml:lang="en">An ideal line/axis is best captured as a 1D spatial region.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000026"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#derived_from"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#NonIdealGeometricElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#output_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AssociationOperation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#StraightnessDeviation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#PerpendicularityDeviation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AngularityDeviation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#AssociatedPlane">
+    <rdfs:label xml:lang="en">Associated Plane</rdfs:label>
+    <skos:prefLabel xml:lang="en">Associated plane</skos:prefLabel>
+    <rdfs:comment xml:lang="en">An ideal plane is best captured as a 2D spatial region.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000009"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#derived_from"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#NonIdealGeometricElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#output_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AssociationOperation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#FlatnessDeviation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#ParallelismDeviation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#PerpendicularityDeviation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AngularityDeviation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#AssociatedPoint">
+    <rdfs:label xml:lang="en">Associated Point</rdfs:label>
+    <skos:prefLabel xml:lang="en">Associated point</skos:prefLabel>
+    <rdfs:comment xml:lang="en">A point-like ideal reference is best captured as a 0D spatial region.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000018"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#derived_from"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#NonIdealGeometricElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#output_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AssociationOperation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#GeometricalCharacteristic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#AssociatedSphere">
+    <rdfs:label xml:lang="en">Associated Sphere</rdfs:label>
+    <skos:prefLabel xml:lang="en">Associated sphere</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Same logic for sphere.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#derived_from"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#NonIdealGeometricElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#output_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AssociationOperation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#GeometricalCharacteristic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#AssociationOperation">
+    <rdfs:label xml:lang="en">Association Operation</rdfs:label>
+    <skos:prefLabel xml:lang="en">Association operation</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Association fits ideal element(s) to non-ideal element(s) according to constraints/objective.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#part_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#GeometricalIdentificationProcess"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_participant"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#NonIdealGeometricElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_output"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AssociatedGeometricElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_output"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AssociatedPoint"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_output"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AssociatedLine"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_output"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AssociatedPlane"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_output"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AssociatedCircle"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_output"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AssociatedCylinder"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_output"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AssociatedCone"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_output"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AssociatedSphere"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#BasicDimension">
+    <rdfs:label xml:lang="en">Basic Dimension</rdfs:label>
+    <skos:prefLabel xml:lang="en">Basic dimension</skos:prefLabel>
+    <rdfs:comment xml:lang="en">A theoretically exact dimension used to define size, location, or orientation.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/onto-gdt#DimensionSpecification"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumReferenceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#FeatureControlFrame"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#BetweenSymbolSpecification">
+    <rdfs:label xml:lang="en">Between Symbol Specification</rdfs:label>
+    <skos:prefLabel xml:lang="en">Between symbol specification</skos:prefLabel>
+    <rdfs:comment xml:lang="en">A symbolic limiter of where a tolerance applies.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#applies_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#SurfacePortion"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#part_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#FeatureControlFrame"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#CircularRunoutToleranceSpecification">
+    <rdfs:label xml:lang="en">Circular Runout Tolerance Specification</rdfs:label>
+    <skos:prefLabel xml:lang="en">Circular runout tolerance specification</skos:prefLabel>
+    <rdfs:comment xml:lang="en">A symbolic GD&amp;T control interpreted during rotation.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/onto-gdt#RunoutToleranceSpecification"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#specifies_characteristic"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#CircularRunoutValue"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumAxis"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#applies_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#CircularRunoutValue">
+    <rdfs:label xml:lang="en">Circular Runout Value</rdfs:label>
+    <skos:prefLabel xml:lang="en">Circular runout value</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Depends on rotation around a datum axis.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000145"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#inheres_in"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumAxis"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#specified_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#CircularRunoutToleranceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#evaluated_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#InspectionProcess"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#CircularityDeviation">
+    <rdfs:label xml:lang="en">Circularity Deviation</rdfs:label>
+    <skos:prefLabel xml:lang="en">Circularity deviation</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Defined relative to an associated ideal circle.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000145"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#inheres_in"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AssociatedCircle"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#specified_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#CircularityToleranceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#evaluated_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#MeasurementProcess"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#CircularityToleranceSpecification">
+    <rdfs:label xml:lang="en">Circularity Tolerance Specification</rdfs:label>
+    <skos:prefLabel xml:lang="en">Circularity tolerance specification</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Same logic for circularity.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/onto-gdt#FormToleranceSpecification"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#specifies_characteristic"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#CircularityDeviation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AnnularToleranceZone"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#applies_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#CoaxialityDeviation">
+    <rdfs:label xml:lang="en">Coaxiality Deviation</rdfs:label>
+    <skos:prefLabel xml:lang="en">Coaxiality deviation</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Defined relative to a datum axis/reference axis.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000145"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#inheres_in"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumAxis"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#specified_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#CoaxialityToleranceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#evaluated_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#MeasurementProcess"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#CoaxialityToleranceSpecification">
+    <rdfs:label xml:lang="en">Coaxiality Tolerance Specification</rdfs:label>
+    <skos:prefLabel xml:lang="en">Coaxiality tolerance specification</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Prescribes axis relation control.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/onto-gdt#PositionToleranceSpecification"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#specifies_characteristic"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#CoaxialityDeviation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumAxis"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#applies_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#CollectionOperation">
+    <rdfs:label xml:lang="en">Collection Operation</rdfs:label>
+    <skos:prefLabel xml:lang="en">Collection operation</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Collection is explicitly one of the six operations.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#part_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#GeometricalIdentificationProcess"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_participant"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#NonIdealGeometricElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_output"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#NonIdealGeometricElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#ConformityCondition">
+    <rdfs:label xml:lang="en">Conformity Condition</rdfs:label>
+    <skos:prefLabel xml:lang="en">Conformity condition</skos:prefLabel>
+    <rdfs:comment xml:lang="en">It is the expressed inequality/limit imposed on the characteristic.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#constrains"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#GeometricalCharacteristic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#part_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#GeometricalSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#evaluated_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#VerificationProcess"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#ConstructionOperation">
+    <rdfs:label xml:lang="en">Construction Operation</rdfs:label>
+    <skos:prefLabel xml:lang="en">Construction operation</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Construction builds ideal element(s) from other ideal elements under constraints.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#part_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#GeometricalIdentificationProcess"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_participant"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AssociatedGeometricElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_output"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#ExactGeometricElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_output"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#CorrectedGeometricElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_output"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#MedianPlane"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_output"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#MedianLine"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#ContinuousFeatureSymbol">
+    <rdfs:label xml:lang="en">Continuous Feature Symbol</rdfs:label>
+    <skos:prefLabel xml:lang="en">Continuous feature symbol</skos:prefLabel>
+    <rdfs:comment xml:lang="en">A symbolic indicator that grouped features are treated as one.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#applies_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#FeatureOfSize"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#part_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#FeatureControlFrame"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#CorrectedGeometricElement">
+    <rdfs:label xml:lang="en">Corrected Geometric Element</rdfs:label>
+    <skos:prefLabel xml:lang="en">Corrected element</skos:prefLabel>
+    <rdfs:comment xml:lang="en">The Corrected element is an ideal element introduced for evaluation.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#derived_from"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AssociatedGeometricElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#output_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#ConstructionOperation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#GeometricalCharacteristic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#CylindricalToleranceZone">
+    <rdfs:label xml:lang="en">Cylindrical Tolerance Zone</rdfs:label>
+    <skos:prefLabel xml:lang="en">Cylindrical tolerance zone</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Used for straightness of an axis and position of an axis.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#StraightnessToleranceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#CylindricityToleranceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#LocalizationToleranceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#CylindricityDeviation">
+    <rdfs:label xml:lang="en">Cylindricity Deviation</rdfs:label>
+    <skos:prefLabel xml:lang="en">Cylindricity deviation</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Defined relative to an associated ideal cylinder.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000145"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#inheres_in"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AssociatedCylinder"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#specified_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#CylindricityToleranceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#evaluated_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#MeasurementProcess"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#CylindricityToleranceSpecification">
+    <rdfs:label xml:lang="en">Cylindricity Tolerance Specification</rdfs:label>
+    <skos:prefLabel xml:lang="en">Cylindricity tolerance specification</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Same logic for cylindricity.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/onto-gdt#FormToleranceSpecification"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#specifies_characteristic"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#CylindricityDeviation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#CylindricalToleranceZone"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#applies_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#DatumAxis">
+    <rdfs:label xml:lang="en">Datum Axis</rdfs:label>
+    <skos:prefLabel xml:lang="en">Datum axis</skos:prefLabel>
+    <rdfs:comment xml:lang="en">A datum axis is a theoretical linear reference.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000026"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#derived_from"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumReferenceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#CoaxialityDeviation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#CircularRunoutValue"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TotalRunoutValue"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#DatumFeature">
+    <rdfs:label xml:lang="en">Datum Feature</rdfs:label>
+    <skos:prefLabel xml:lang="en">Datum feature</skos:prefLabel>
+    <rdfs:comment xml:lang="en">A datum feature is a real physical surface/feature chosen as reference; datums are derived from datum features.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000024"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#part_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#Part"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#derives"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumPoint"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#derives"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumAxis"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#derives"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumPlane"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumReferenceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#DatumPlane">
+    <rdfs:label xml:lang="en">Datum Plane</rdfs:label>
+    <skos:prefLabel xml:lang="en">Datum plane</skos:prefLabel>
+    <rdfs:comment xml:lang="en">A datum plane is a theoretical planar reference.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000009"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#derived_from"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumReferenceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#ParallelismDeviation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#PerpendicularityDeviation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AngularityDeviation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#DatumPoint">
+    <rdfs:label xml:lang="en">Datum Point</rdfs:label>
+    <skos:prefLabel xml:lang="en">Datum point</skos:prefLabel>
+    <rdfs:comment xml:lang="en">A datum point is a theoretical point reference.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000018"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#derived_from"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumReferenceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#DatumReferenceFrameSpecification">
+    <rdfs:label xml:lang="en">Datum Reference Frame Specification</rdfs:label>
+    <skos:prefLabel xml:lang="en">Datum reference frame specification</skos:prefLabel>
+    <rdfs:comment xml:lang="en">The datum frame is a specified reference system for manufacture/inspection.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_part"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumReferenceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#PositionToleranceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#PositionError"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#DatumReferenceSpecification">
+    <rdfs:label xml:lang="en">Datum Reference Specification</rdfs:label>
+    <skos:prefLabel xml:lang="en">Datum reference specification</skos:prefLabel>
+    <rdfs:comment xml:lang="en">The ordered datum reference (A, B, C...) is prescribed symbolic information.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumPoint"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumAxis"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumPlane"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#part_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumReferenceFrameSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#part_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#FeatureControlFrame"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#DimensionSpecification">
+    <rdfs:label xml:lang="en">Dimension Specification</rdfs:label>
+    <skos:prefLabel xml:lang="en">Dimension specification</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Nominal dimension belongs to the definition, not to the real part.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/onto-gdt#GeometricalSpecification"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#specifies_characteristic"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#LocalSize"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#applies_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#FeatureOfSize"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#EnvelopeRequirement">
+    <rdfs:label xml:lang="en">Envelope Requirement</rdfs:label>
+    <skos:prefLabel xml:lang="en">Envelope requirement</skos:prefLabel>
+    <rdfs:comment xml:lang="en">The envelope principle is a rule/requirement, not a physical thing.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#applies_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#FeatureOfSize"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AssociatedCylinder"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#MaximumMaterialCondition"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#FeatureControlFrame"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#ExactGeometricElement">
+    <rdfs:label xml:lang="en">Exact Geometric Element</rdfs:label>
+    <skos:prefLabel xml:lang="en">Exact geometric element</skos:prefLabel>
+    <rdfs:comment xml:lang="en">The Exact theoretical element is an ideal geometric referent, not a material entity.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#derived_from"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AssociatedGeometricElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#output_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#ConstructionOperation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#PositionError"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#GeometricalSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#ExtractionOperation">
+    <rdfs:label xml:lang="en">Extraction Operation</rdfs:label>
+    <skos:prefLabel xml:lang="en">Extraction operation</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Extraction is one of the six GPS operations.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#part_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#GeometricalIdentificationProcess"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_participant"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#NonIdealGeometricElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_output"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AssociatedPoint"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#FeatureControlFrame">
+    <rdfs:label xml:lang="en">Feature Control Frame</rdfs:label>
+    <skos:prefLabel xml:lang="en">Feature control frame</skos:prefLabel>
+    <rdfs:comment xml:lang="en">A symbolic information structure on the drawing.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_part"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#ToleranceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_part"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumReferenceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_part"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#MaximumMaterialConditionModifier"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_part"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#LeastMaterialConditionModifier"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_part"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#BasicDimension"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#FeatureOfSize">
+    <rdfs:label xml:lang="en">Feature Of Size</rdfs:label>
+    <skos:prefLabel xml:lang="en">Feature of size</skos:prefLabel>
+    <rdfs:comment xml:lang="en">A FOS is a real part feature with measurable size, such as a hole, slot, pin, or tab.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000024"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#part_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#Part"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#bearer_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#LocalSize"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#bearer_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#ActualDiameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#bearer_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#MaximumMaterialCondition"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#bearer_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#LeastMaterialCondition"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#EnvelopeRequirement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#ContinuousFeatureSymbol"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#FilteringOperation">
+    <rdfs:label xml:lang="en">Filtering Operation</rdfs:label>
+    <skos:prefLabel xml:lang="en">Filtering operation</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Filtering is one of the six GPS operations.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#part_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#GeometricalIdentificationProcess"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_participant"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#NonIdealGeometricElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_output"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#NonIdealGeometricElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#FlatnessDeviation">
+    <rdfs:label xml:lang="en">Flatness Deviation</rdfs:label>
+    <skos:prefLabel xml:lang="en">Flatness deviation</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Defined by the relation between a real surface and an associated plane.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000145"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#inheres_in"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AssociatedPlane"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#specified_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#FlatnessToleranceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#evaluated_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#MeasurementProcess"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#FlatnessToleranceSpecification">
+    <rdfs:label xml:lang="en">Flatness Tolerance Specification</rdfs:label>
+    <skos:prefLabel xml:lang="en">Flatness tolerance specification</skos:prefLabel>
+    <rdfs:comment xml:lang="en">The flatness callout is a specification.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/onto-gdt#FormToleranceSpecification"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#specifies_characteristic"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#FlatnessDeviation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#PlanarToleranceZone"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#applies_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#FormToleranceSpecification">
+    <rdfs:label xml:lang="en">Form Tolerance Specification</rdfs:label>
+    <skos:prefLabel xml:lang="en">Form tolerance specification</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Flatness, straightness, circularity, cylindricity are prescriptive controls.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/onto-gdt#ToleranceSpecification"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#applies_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#GeometricalCharacteristic">
+    <rdfs:label xml:lang="en">Geometrical Characteristic</rdfs:label>
+    <skos:prefLabel xml:lang="en">Geometrical characteristic</skos:prefLabel>
+    <rdfs:comment xml:lang="en">In GPS, the characteristic is the quantified magnitude on which conformity depends.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#inheres_in"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#specified_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#GeometricalSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#evaluated_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#MeasurementProcess"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#evaluated_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#VerificationProcess"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#GeometricalIdentificationProcess">
+    <rdfs:label xml:lang="en">Geometrical Identification Process</rdfs:label>
+    <skos:prefLabel xml:lang="en">Geometrical identification process</skos:prefLabel>
+    <rdfs:comment xml:lang="en">GPS says geometric elements are identified by operations.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_part"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#PartitionOperation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_part"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#ExtractionOperation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_part"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#FilteringOperation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_part"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#CollectionOperation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_part"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AssociationOperation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_part"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#ConstructionOperation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_participant"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#SkinModelSurface"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_output"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#NonIdealGeometricElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_output"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#IdealGeometricElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#GeometricalSpecification">
+    <rdfs:label xml:lang="en">Geometrical Specification</rdfs:label>
+    <skos:prefLabel xml:lang="en">Geometrical specification</skos:prefLabel>
+    <rdfs:comment xml:lang="en">A specification is prescriptive information, not a physical property of the part.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#applies_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#applies_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#Assembly"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#specifies_characteristic"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#GeometricalCharacteristic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_part"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#ConformityCondition"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumReferenceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#ToleranceZone"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#IdealGeometricElement">
+    <rdfs:label xml:lang="en">Ideal Geometric Element</rdfs:label>
+    <skos:prefLabel xml:lang="en">Ideal geometric element</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Ideal elements are equation-based and not material.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#derived_from"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#NonIdealGeometricElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#output_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AssociationOperation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#output_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#ConstructionOperation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#GeometricalSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#InspectionProcess">
+    <rdfs:label xml:lang="en">Inspection Process</rdfs:label>
+    <skos:prefLabel xml:lang="en">Inspection process</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Inspection is an activity of verification/metrology.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_participant"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#Part"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_participant"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#Assembly"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#evaluates"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#ToleranceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#evaluates"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#CircularRunoutValue"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#evaluates"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TotalRunoutValue"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumAxis"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#LeastMaterialCondition">
+    <rdfs:label xml:lang="en">Least Material Condition</rdfs:label>
+    <skos:prefLabel xml:lang="en">Least material condition</skos:prefLabel>
+    <rdfs:comment xml:lang="en">As a state of a real feature of size, LMC is the condition of minimum material amount.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#inheres_in"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#FeatureOfSize"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#is_about"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#LeastMaterialConditionModifier"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#LeastMaterialConditionModifier">
+    <rdfs:label xml:lang="en">Least Material Condition Modifier</rdfs:label>
+    <skos:prefLabel xml:lang="en">Least material condition modifier</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Same logic for the symbol L.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#is_about"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#LeastMaterialCondition"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#part_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#FeatureControlFrame"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#part_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#ToleranceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#LocalSize">
+    <rdfs:label xml:lang="en">Local Size</rdfs:label>
+    <skos:prefLabel xml:lang="en">Local size</skos:prefLabel>
+    <rdfs:comment xml:lang="en">It is an actual measurable size borne by the part/feature.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#inheres_in"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#FeatureOfSize"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#specified_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DimensionSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#evaluated_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#MeasurementProcess"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#LocalizationToleranceSpecification">
+    <rdfs:label xml:lang="en">Localization Tolerance Specification</rdfs:label>
+    <skos:prefLabel xml:lang="en">Localization tolerance specification</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Prescribes a location zone relative to references.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/onto-gdt#PositionToleranceSpecification"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#specifies_characteristic"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#PositionError"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumReferenceFrameSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#CylindricalToleranceZone"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#applies_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#applies_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#Assembly"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#MaximumMaterialCondition">
+    <rdfs:label xml:lang="en">Maximum Material Condition</rdfs:label>
+    <skos:prefLabel xml:lang="en">Maximum material condition</skos:prefLabel>
+    <rdfs:comment xml:lang="en">As a state of a real feature of size, MMC is the condition of maximum material amount.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#inheres_in"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#FeatureOfSize"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#is_about"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#MaximumMaterialConditionModifier"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#EnvelopeRequirement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#MaximumMaterialConditionModifier">
+    <rdfs:label xml:lang="en">Maximum Material Condition Modifier</rdfs:label>
+    <skos:prefLabel xml:lang="en">Maximum material condition modifier</skos:prefLabel>
+    <rdfs:comment xml:lang="en">The symbol M is part of the specification language, not the actual material state.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#is_about"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#MaximumMaterialCondition"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#part_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#FeatureControlFrame"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#part_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#ToleranceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#MeasurementProcess">
+    <rdfs:label xml:lang="en">Measurement Process</rdfs:label>
+    <skos:prefLabel xml:lang="en">Measurement process</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Measurement is an occurrent, not a quality or specification.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_participant"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#Part"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_participant"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#evaluates"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#GeometricalCharacteristic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_output"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#GeometricalCharacteristic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#MedianLine">
+    <rdfs:label xml:lang="en">Median Line</rdfs:label>
+    <skos:prefLabel xml:lang="en">Median line</skos:prefLabel>
+    <rdfs:comment xml:lang="en">A median line is an ideal 1D construction.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000026"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#derived_from"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AssociatedLine"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#GeometricalCharacteristic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#MedianPlane">
+    <rdfs:label xml:lang="en">Median Plane</rdfs:label>
+    <skos:prefLabel xml:lang="en">Median plane</skos:prefLabel>
+    <rdfs:comment xml:lang="en">A median plane is an ideal constructed plane.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000009"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#derived_from"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AssociatedPlane"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#SymmetryDeviation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#SymmetryToleranceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#NominalDiameterSpecification">
+    <rdfs:label xml:lang="en">Nominal Diameter Specification</rdfs:label>
+    <skos:prefLabel xml:lang="en">Nominal diameter specification</skos:prefLabel>
+    <rdfs:comment xml:lang="en">A prescribed nominal value, not a borne property of the part.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/onto-gdt#DimensionSpecification"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#specifies_characteristic"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#ActualDiameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#applies_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#FeatureOfSize"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#NominalLengthSpecification">
+    <rdfs:label xml:lang="en">Nominal Length Specification</rdfs:label>
+    <skos:prefLabel xml:lang="en">Nominal length specification</skos:prefLabel>
+    <rdfs:comment xml:lang="en">A target value in the design definition.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/onto-gdt#DimensionSpecification"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#specifies_characteristic"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#ActualLength"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#applies_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#Part"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#NonIdealGeometricElement">
+    <rdfs:label xml:lang="en">Non Ideal Geometric Element</rdfs:label>
+    <skos:prefLabel xml:lang="en">Non-ideal geometric element</skos:prefLabel>
+    <rdfs:comment xml:lang="en">In the GPS paper, non-ideal elements depend totally on the real surface of the part.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000024"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#part_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#Part"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#derived_from"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#SkinModelSurface"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#input_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AssociationOperation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#input_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#ExtractionOperation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#input_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#FilteringOperation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#input_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#CollectionOperation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#OrientationToleranceSpecification">
+    <rdfs:label xml:lang="en">Orientation Tolerance Specification</rdfs:label>
+    <skos:prefLabel xml:lang="en">Orientation tolerance specification</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Parallelism, perpendicularity, angularity are prescriptive controls.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/onto-gdt#ToleranceSpecification"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#applies_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumReferenceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#ParallelismDeviation">
+    <rdfs:label xml:lang="en">Parallelism Deviation</rdfs:label>
+    <skos:prefLabel xml:lang="en">Parallelism deviation</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Defined relative to a datum-derived reference plane/axis.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000145"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#inheres_in"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumPlane"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#specified_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#ParallelismToleranceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#evaluated_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#MeasurementProcess"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#ParallelismToleranceSpecification">
+    <rdfs:label xml:lang="en">Parallelism Tolerance Specification</rdfs:label>
+    <skos:prefLabel xml:lang="en">Parallelism tolerance specification</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Same logic for parallelism.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/onto-gdt#OrientationToleranceSpecification"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#specifies_characteristic"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#ParallelismDeviation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumReferenceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#PlanarToleranceZone"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#applies_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#Part">
+    <rdfs:label xml:lang="en">Part</rdfs:label>
+    <skos:prefLabel xml:lang="en">Part</skos:prefLabel>
+    <rdfs:comment xml:lang="en">A manufactured part is a single material entity; the GPS paper discusses specifications on isolated parts.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_part"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_part"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_part"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#ReferenceSurface"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_part"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#SurfacePortion"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_part"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#FeatureOfSize"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_part"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#NonIdealGeometricElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_part"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#SkinModelSurface"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#part_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#Assembly"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#PartitionOperation">
+    <rdfs:label xml:lang="en">Partition Operation</rdfs:label>
+    <skos:prefLabel xml:lang="en">Partition operation</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Partition is one of the six GPS operations.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#part_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#GeometricalIdentificationProcess"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_participant"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#SkinModelSurface"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_output"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#NonIdealGeometricElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#PerpendicularityDeviation">
+    <rdfs:label xml:lang="en">Perpendicularity Deviation</rdfs:label>
+    <skos:prefLabel xml:lang="en">Perpendicularity deviation</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Defined relative to a datum plane/axis at 90 degrees.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000145"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#inheres_in"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumPlane"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#specified_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#PerpendicularityToleranceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#evaluated_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#MeasurementProcess"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#PerpendicularityToleranceSpecification">
+    <rdfs:label xml:lang="en">Perpendicularity Tolerance Specification</rdfs:label>
+    <skos:prefLabel xml:lang="en">Perpendicularity tolerance specification</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Same logic for perpendicularity.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/onto-gdt#OrientationToleranceSpecification"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#specifies_characteristic"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#PerpendicularityDeviation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumReferenceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#PlanarToleranceZone"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#applies_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#PlanarToleranceZone">
+    <rdfs:label xml:lang="en">Planar Tolerance Zone</rdfs:label>
+    <skos:prefLabel xml:lang="en">Planar tolerance zone</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Used for flatness, perpendicularity, parallelism, etc.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#FlatnessToleranceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#ParallelismToleranceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#PerpendicularityToleranceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AngularityToleranceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#PositionError">
+    <rdfs:label xml:lang="en">Position Error</rdfs:label>
+    <skos:prefLabel xml:lang="en">Position error</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Defined relative to an exact constructed location or datum reference frame.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000145"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#inheres_in"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#ExactGeometricElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumReferenceFrameSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#specified_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#PositionToleranceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#specified_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#LocalizationToleranceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#evaluated_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#MeasurementProcess"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#PositionToleranceSpecification">
+    <rdfs:label xml:lang="en">Position Tolerance Specification</rdfs:label>
+    <skos:prefLabel xml:lang="en">Position tolerance specification</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Position/location controls are prescribed, not qualities themselves.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/onto-gdt#ToleranceSpecification"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#applies_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#applies_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#Assembly"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumReferenceFrameSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#ReferenceSurface">
+    <rdfs:label xml:lang="en">Reference Surface</rdfs:label>
+    <skos:prefLabel xml:lang="en">Reference surface</skos:prefLabel>
+    <rdfs:comment xml:lang="en">A reference surface is a selected real surface region on the part.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000024"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#part_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#Part"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumReferenceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#bearer_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#SurfaceRoughness"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#RunoutToleranceSpecification">
+    <rdfs:label xml:lang="en">Runout Tolerance Specification</rdfs:label>
+    <skos:prefLabel xml:lang="en">Runout tolerance specification</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Circular and total runout are specified controls.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/onto-gdt#ToleranceSpecification"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#applies_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumAxis"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#SkinModelSurface">
+    <rdfs:label xml:lang="en">Skin Model Surface</rdfs:label>
+    <skos:prefLabel xml:lang="en">Skin model surface</skos:prefLabel>
+    <rdfs:comment xml:lang="en">If used for the real surface as modeled in GPS, it remains tied to the real material part.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000024"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#part_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#Part"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#input_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#PartitionOperation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#source_for"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#NonIdealGeometricElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#StraightnessDeviation">
+    <rdfs:label xml:lang="en">Straightness Deviation</rdfs:label>
+    <skos:prefLabel xml:lang="en">Straightness deviation</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Defined relative to an associated ideal line.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000145"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#inheres_in"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AssociatedLine"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#specified_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#StraightnessToleranceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#evaluated_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#MeasurementProcess"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#StraightnessToleranceSpecification">
+    <rdfs:label xml:lang="en">Straightness Tolerance Specification</rdfs:label>
+    <skos:prefLabel xml:lang="en">Straightness tolerance specification</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Same logic for straightness.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/onto-gdt#FormToleranceSpecification"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#specifies_characteristic"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#StraightnessDeviation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#CylindricalToleranceZone"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#applies_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#SurfaceFinishSpecification">
+    <rdfs:label xml:lang="en">Surface Finish Specification</rdfs:label>
+    <skos:prefLabel xml:lang="en">Surface finish specification</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Surface finish callout is a requirement on the drawing/model.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#applies_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#SurfacePortion"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#specifies_characteristic"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#SurfaceRoughness"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#SurfacePortion">
+    <rdfs:label xml:lang="en">Surface Portion</rdfs:label>
+    <skos:prefLabel xml:lang="en">Surface portion</skos:prefLabel>
+    <rdfs:comment xml:lang="en">A bounded surface patch on a real part is best modeled as a fiat part.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000024"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#part_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#Part"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#bearer_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#SurfaceRoughness"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#SurfaceFinishSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#BetweenSymbolSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AllAroundSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#SurfaceRoughness">
+    <rdfs:label xml:lang="en">Surface Roughness</rdfs:label>
+    <skos:prefLabel xml:lang="en">Surface roughness</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Roughness is a real state of the surface.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#inheres_in"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#SurfacePortion"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#specified_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#SurfaceFinishSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#evaluated_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#MeasurementProcess"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#SymmetryDeviation">
+    <rdfs:label xml:lang="en">Symmetry Deviation</rdfs:label>
+    <skos:prefLabel xml:lang="en">Symmetry deviation</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Defined relative to a median plane derived from datum-related planes.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000145"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#inheres_in"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#MedianPlane"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#specified_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#SymmetryToleranceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#evaluated_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#MeasurementProcess"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#SymmetryToleranceSpecification">
+    <rdfs:label xml:lang="en">Symmetry Tolerance Specification</rdfs:label>
+    <skos:prefLabel xml:lang="en">Symmetry tolerance specification</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Prescribes symmetry relative to a median reference.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/onto-gdt#PositionToleranceSpecification"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#specifies_characteristic"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#SymmetryDeviation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#MedianPlane"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#applies_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#TargetAngleSpecification">
+    <rdfs:label xml:lang="en">Target Angle Specification</rdfs:label>
+    <skos:prefLabel xml:lang="en">Target angle specification</skos:prefLabel>
+    <rdfs:comment xml:lang="en">An exact specified angle used in design.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/onto-gdt#DimensionSpecification"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumReferenceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#AngularityToleranceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#ToleranceSpecification">
+    <rdfs:label xml:lang="en">Tolerance Specification</rdfs:label>
+    <skos:prefLabel xml:lang="en">Tolerance specification</skos:prefLabel>
+    <rdfs:comment xml:lang="en">A tolerance is an allowable variation statement.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/onto-gdt#GeometricalSpecification"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#applies_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_part"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#ConformityCondition"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#ToleranceZone"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#ToleranceZone">
+    <rdfs:label xml:lang="en">Tolerance Zone</rdfs:label>
+    <skos:prefLabel xml:lang="en">Tolerance zone</skos:prefLabel>
+    <rdfs:comment xml:lang="en">A tolerance zone is a geometric region, not a material portion.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#ToleranceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#related_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#TolerancedFeature">
+    <rdfs:label xml:lang="en">Toleranced Feature</rdfs:label>
+    <skos:prefLabel xml:lang="en">Toleranced feature</skos:prefLabel>
+    <rdfs:comment xml:lang="en">A toleranced feature is a selected real portion of the part, not a separate object.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000024"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#part_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#Part"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#bearer_of"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#GeometricalCharacteristic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#referenced_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#GeometricalSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#conforms_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#ToleranceZone"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#TotalRunoutToleranceSpecification">
+    <rdfs:label xml:lang="en">Total Runout Tolerance Specification</rdfs:label>
+    <skos:prefLabel xml:lang="en">Total runout tolerance specification</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Same for total runout.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/onto-gdt#RunoutToleranceSpecification"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#specifies_characteristic"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TotalRunoutValue"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumAxis"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#applies_to"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#TotalRunoutValue">
+    <rdfs:label xml:lang="en">Total Runout Value</rdfs:label>
+    <skos:prefLabel xml:lang="en">Total runout value</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Same logic for the whole surface over 360 degrees.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000145"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#inheres_in"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TolerancedFeature"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#references"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#DatumAxis"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#specified_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#TotalRunoutToleranceSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#evaluated_by"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#InspectionProcess"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/onto-gdt#VerificationProcess">
+    <rdfs:label xml:lang="en">Verification Process</rdfs:label>
+    <skos:prefLabel xml:lang="en">Verification process</skos:prefLabel>
+    <rdfs:comment xml:lang="en">Verification compares measured characteristic to the imposed condition/specification.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_participant"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#Part"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#has_participant"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#Assembly"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#evaluates"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#ConformityCondition"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#evaluates"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#GeometricalSpecification"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://example.org/onto-gdt#evaluates"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/onto-gdt#GeometricalCharacteristic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+</rdf:RDF>
