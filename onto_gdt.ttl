@@ -768,6 +768,9 @@ bfo:BFO_0000018 a owl:Class ;
         [ a owl:Restriction ; owl:onProperty :input_to ; owl:someValuesFrom :FilteringOperation ],
         [ a owl:Restriction ; owl:onProperty :input_to ; owl:someValuesFrom :CollectionOperation ] .
 
+[] a owl:AllDisjointClasses ;
+    owl:members ( :IdealGeometricElement :NonIdealGeometricElement ) .
+
 :OrientationToleranceSpecification a owl:Class ;
     rdfs:label "Orientation Tolerance Specification"@en ;
     skos:prefLabel "Orientation tolerance specification"@en ;
