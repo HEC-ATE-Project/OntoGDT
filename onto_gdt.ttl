@@ -711,6 +711,37 @@ bfo:BFO_0000018 a owl:Class ;
         [ a owl:Restriction ; owl:onProperty :part_of ; owl:someValuesFrom :FeatureControlFrame ],
         [ a owl:Restriction ; owl:onProperty :part_of ; owl:someValuesFrom :ToleranceSpecification ] .
 
+:ManufacturingProcess a owl:Class ;
+    rdfs:label "Manufacturing Process"@en ;
+    skos:prefLabel "Manufacturing process"@en ;
+    rdfs:comment "A process that fabricates a Part. Counterpart, on the production side, to the verification/measurement processes already modeled in OntoGDT."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015>,
+        [ a owl:Restriction ; owl:onProperty :has_output ; owl:someValuesFrom :Part ] .
+
+:AdditiveManufacturingProcess a owl:Class ;
+    rdfs:label "Additive Manufacturing Process"@en ;
+    skos:prefLabel "Additive manufacturing process"@en ;
+    rdfs:comment "A manufacturing process building the part by material addition (vs. subtractive)."@en ;
+    rdfs:subClassOf :ManufacturingProcess .
+
+:LPBFProcess a owl:Class ;
+    rdfs:label "Laser Powder Bed Fusion Process"@en ;
+    skos:prefLabel "LPBF process"@en ;
+    rdfs:comment "Powder-bed fusion by laser; the target process of the HEC-ATE project."@en ;
+    rdfs:subClassOf :AdditiveManufacturingProcess .
+
+:DEDProcess a owl:Class ;
+    rdfs:label "Directed Energy Deposition Process"@en ;
+    skos:prefLabel "DED process"@en ;
+    rdfs:comment "Directed energy deposition additive process."@en ;
+    rdfs:subClassOf :AdditiveManufacturingProcess .
+
+:WAAMProcess a owl:Class ;
+    rdfs:label "Wire Arc Additive Manufacturing Process"@en ;
+    skos:prefLabel "WAAM process"@en ;
+    rdfs:comment "Wire-arc additive manufacturing process."@en ;
+    rdfs:subClassOf :AdditiveManufacturingProcess .
+
 :MeasurementProcess a owl:Class ;
     rdfs:label "Measurement Process"@en ;
     skos:prefLabel "Measurement process"@en ;
