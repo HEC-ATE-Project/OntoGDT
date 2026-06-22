@@ -801,6 +801,14 @@ bfo:BFO_0000018 a owl:Class ;
 [] a owl:AllDisjointClasses ;
     owl:members ( :IdealGeometricElement :NonIdealGeometricElement ) .
 
+:OffsetToleranceZone a owl:Class ;
+    rdfs:label "Offset Tolerance Zone"@en ;
+    skos:prefLabel "Offset tolerance zone"@en ;
+    rdfs:comment "Zone bounded by two surfaces offset by +/-t/2 from the nominal feature; contains the real surface."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000141>,
+        :ToleranceZone,
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :SurfaceProfileToleranceSpecification ] .
+
 :OrientationToleranceSpecification a owl:Class ;
     rdfs:label "Orientation Tolerance Specification"@en ;
     skos:prefLabel "Orientation tolerance specification"@en ;
@@ -906,6 +914,38 @@ bfo:BFO_0000018 a owl:Class ;
         [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :TolerancedFeature ],
         [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :Assembly ],
         [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :DatumReferenceFrameSpecification ] .
+
+:ProfileDeviation a owl:Class ;
+    rdfs:label "Profile Deviation"@en ;
+    skos:prefLabel "Profile deviation"@en ;
+    rdfs:comment "Deviation of the real surface from its nominal, controlled by a profile tolerance."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019>,
+        :GeometricalCharacteristic .
+
+:ProfileToleranceSpecification a owl:Class ;
+    rdfs:label "Profile Tolerance Specification"@en ;
+    skos:prefLabel "Profile tolerance specification"@en ;
+    rdfs:comment "Profile tolerance family (surface or line profile); may be specified with or without a datum reference frame."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        :ToleranceSpecification .
+
+:SurfaceProfileToleranceSpecification a owl:Class ;
+    rdfs:label "Surface Profile Tolerance Specification"@en ;
+    skos:prefLabel "Surface profile tolerance specification"@en ;
+    rdfs:comment "Controls a surface against its nominal by an offset (tubular-of-surface) zone; suited to organic / freeform contours."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        :ProfileToleranceSpecification,
+        [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :TolerancedFeature ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :OffsetToleranceZone ],
+        [ a owl:Restriction ; owl:onProperty :specifies_characteristic ; owl:someValuesFrom :ProfileDeviation ],
+        [ a owl:Restriction ; owl:onProperty :has_part ; owl:someValuesFrom :ConformityCondition ] .
+
+:LineProfileToleranceSpecification a owl:Class ;
+    rdfs:label "Line Profile Tolerance Specification"@en ;
+    skos:prefLabel "Line profile tolerance specification"@en ;
+    rdfs:comment "Per-section (2D) profile control."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        :ProfileToleranceSpecification .
 
 :ReferenceSurface a owl:Class ;
     rdfs:label "Reference Surface"@en ;
