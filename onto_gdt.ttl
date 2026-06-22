@@ -412,7 +412,6 @@ bfo:BFO_0000018 a owl:Class ;
     rdfs:comment "Used for straightness of an axis and position of an axis."@en ;
     rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000141>,
         [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :StraightnessToleranceSpecification ],
-        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :CylindricityToleranceSpecification ],
         [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :LocalizationToleranceSpecification ] .
 
 :CylindricityDeviation a owl:Class ;
@@ -432,7 +431,7 @@ bfo:BFO_0000018 a owl:Class ;
     rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
         :FormToleranceSpecification,
         [ a owl:Restriction ; owl:onProperty :specifies_characteristic ; owl:someValuesFrom :CylindricityDeviation ],
-        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :CylindricalToleranceZone ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :TubularToleranceZone ],
         [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :TolerancedFeature ] .
 
 :DatumAxis a owl:Class ;
@@ -1059,6 +1058,14 @@ bfo:BFO_0000018 a owl:Class ;
         [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :DatumAxis ],
         [ a owl:Restriction ; owl:onProperty :specified_by ; owl:someValuesFrom :TotalRunoutToleranceSpecification ],
         [ a owl:Restriction ; owl:onProperty :evaluated_by ; owl:someValuesFrom :InspectionProcess ] .
+
+:TubularToleranceZone a owl:Class ;
+    rdfs:label "Tubular Tolerance Zone"@en ;
+    skos:prefLabel "Tubular tolerance zone"@en ;
+    rdfs:comment "Zone bounded by two coaxial cylinders distant by the tolerance value t; constrains a surface (not an axis). Used by cylindricity."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000141>,
+        :ToleranceZone,
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :CylindricityToleranceSpecification ] .
 
 :VerificationProcess a owl:Class ;
     rdfs:label "Verification Process"@en ;
