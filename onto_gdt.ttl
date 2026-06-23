@@ -4,6 +4,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/onto-gdt> a owl:Ontology ;
     owl:imports <http://purl.obolibrary.org/obo/bfo.owl> ;
@@ -367,6 +368,16 @@ bfo:BFO_0000018 a owl:Class ;
         [ a owl:Restriction ; owl:onProperty :part_of ; owl:someValuesFrom :GeometricalIdentificationProcess ],
         [ a owl:Restriction ; owl:onProperty :has_participant ; owl:someValuesFrom :NonIdealGeometricElement ],
         [ a owl:Restriction ; owl:onProperty :has_output ; owl:someValuesFrom :NonIdealGeometricElement ] .
+
+:CommonZoneSpecification a owl:Class ;
+    rdfs:label "Common Zone Specification"@en ;
+    skos:prefLabel "Common zone specification"@en ;
+    rdfs:comment "A single common tolerance zone shared by several toleranced features (CZ / pattern)."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        :GeometricalSpecification,
+        [ a owl:Restriction ; owl:onProperty :applies_to ;
+          owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ; owl:onClass :TolerancedFeature ],
+        [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :ToleranceZone ] .
 
 :ConformityCondition a owl:Class ;
     rdfs:label "Conformity Condition"@en ;
