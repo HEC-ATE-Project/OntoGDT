@@ -44,6 +44,9 @@ bfo:BFO_0000009 a owl:Class ;
 bfo:BFO_0000018 a owl:Class ;
     rdfs:label "zero-dimensional spatial region"@en .
 
+bfo:BFO_0000040 a owl:Class ;
+    rdfs:label "material entity"@en .
+
 :applies_to a owl:ObjectProperty ;
     rdfs:label "applies to"@en .
 
@@ -85,6 +88,12 @@ bfo:BFO_0000018 a owl:Class ;
 
 :is_about a owl:ObjectProperty ;
     rdfs:label "is about"@en .
+
+:made_of a owl:ObjectProperty ;
+    rdfs:label "made of"@en ;
+    skos:prefLabel "made of"@en ;
+    rdfs:domain :Part ;
+    rdfs:range :Material .
 
 :output_of a owl:ObjectProperty ;
     rdfs:label "output of"@en .
@@ -702,6 +711,12 @@ bfo:BFO_0000018 a owl:Class ;
         [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :CylindricalToleranceZone ],
         [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :TolerancedFeature ],
         [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :Assembly ] .
+
+:Material a owl:Class ;
+    rdfs:label "Material"@en ;
+    skos:prefLabel "Material"@en ;
+    rdfs:comment "The material a Part is made of (e.g., AlSi10Mg)."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> .
 
 :MaximumMaterialCondition a owl:Class ;
     rdfs:label "Maximum Material Condition"@en ;
