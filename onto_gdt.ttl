@@ -50,6 +50,24 @@ bfo:BFO_0000040 a owl:Class ;
 bfo:BFO_0000016 a owl:Class ;
     rdfs:label "disposition"@en .
 
+bfo:BFO_0000004 a owl:Class ;
+    rdfs:label "independent continuant"@en .
+
+bfo:BFO_0000029 a owl:Class ;
+    rdfs:label "site"@en .
+
+bfo:BFO_0000008 a owl:Class ;
+    rdfs:label "temporal region"@en .
+
+bfo:BFO_0000038 a owl:Class ;
+    rdfs:label "one-dimensional temporal region"@en .
+
+bfo:BFO_0000148 a owl:Class ;
+    rdfs:label "zero-dimensional temporal region"@en .
+
+bfo:BFO_0000035 a owl:Class ;
+    rdfs:label "process boundary"@en .
+
 :applies_to a owl:ObjectProperty ;
     rdfs:label "applies to"@en .
 
@@ -848,6 +866,59 @@ bfo:BFO_0000016 a owl:Class ;
     skos:prefLabel "Material"@en ;
     rdfs:comment "The material a Part is made of (e.g., AlSi10Mg)."@en ;
     rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+# ===== MESTA foundations: spatial-nature regions and temporal regions =====
+# Mereotopology-based Spatio-temporal Theory for Additive manufacturing
+# (Douin 2024). Occurrent-based BFO mapping: the layer-wise spatial regions
+# are continuants of nature matter / void / support; the temporal regions Tr
+# are BFO temporal regions; the 9 ST primitives (added next) are occurrents.
+
+:BuildRegion a owl:Class ;
+    rdfs:label "Build Region"@en ;
+    skos:prefLabel "Build region"@en ;
+    rdfs:comment "A region of the build volume considered in the layer-wise (spatio-temporal) description of an additively manufactured part; it is of one of three spatial natures: matter, void, or support (Douin 2024, MeSTA)."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000004> .
+
+:MatterRegion a owl:Class ;
+    rdfs:label "Matter Region"@en ;
+    skos:prefLabel "Matter region"@en ;
+    rdfs:comment "A build region of nature matter: solidified part material (Fr. matiere)."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040>,
+        :BuildRegion .
+
+:VoidRegion a owl:Class ;
+    rdfs:label "Void Region"@en ;
+    skos:prefLabel "Void region"@en ;
+    rdfs:comment "A build region of nature void: an empty region (absence of material), modeled as an immaterial site (Fr. vide)."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000029>,
+        :BuildRegion .
+
+:SupportRegion a owl:Class ;
+    rdfs:label "Support Region"@en ;
+    skos:prefLabel "Support region"@en ;
+    rdfs:comment "A build region of nature support: sacrificial support-structure material, removed after fabrication (Fr. support)."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040>,
+        :BuildRegion .
+
+:FabricationTimeRegion a owl:Class ;
+    rdfs:label "Fabrication Time Region"@en ;
+    skos:prefLabel "Fabrication time region"@en ;
+    rdfs:comment "A temporal region during additive fabrication (Tr): either a layer interval (a process) or a single layer transition (an instant, an event) (Douin 2024)."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000008> .
+
+:SliceInterval a owl:Class ;
+    rdfs:label "Slice Interval"@en ;
+    skos:prefLabel "Slice interval"@en ;
+    rdfs:comment "A one-dimensional (interval) fabrication time region spanning a range of layers, during which build regions evolve through spatio-temporal processes."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000038>,
+        :FabricationTimeRegion .
+
+:LayerInstant a owl:Class ;
+    rdfs:label "Layer Instant"@en ;
+    skos:prefLabel "Layer instant"@en ;
+    rdfs:comment "A zero-dimensional (punctual) fabrication time region at a single layer transition, at which spatio-temporal events (appearance, disappearance, merging, separation) occur."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000148>,
+        :FabricationTimeRegion .
 
 :MaximumMaterialCondition a owl:Class ;
     rdfs:label "Maximum Material Condition"@en ;
