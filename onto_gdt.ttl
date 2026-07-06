@@ -47,6 +47,9 @@ bfo:BFO_0000018 a owl:Class ;
 bfo:BFO_0000040 a owl:Class ;
     rdfs:label "material entity"@en .
 
+bfo:BFO_0000016 a owl:Class ;
+    rdfs:label "disposition"@en .
+
 :applies_to a owl:ObjectProperty ;
     rdfs:label "applies to"@en .
 
@@ -64,6 +67,19 @@ bfo:BFO_0000040 a owl:Class ;
 
 :derives a owl:ObjectProperty ;
     rdfs:label "derives"@en .
+
+:established_by a owl:ObjectProperty ;
+    rdfs:label "established by"@en ;
+    skos:prefLabel "established by"@en ;
+    rdfs:domain :KinematicPair ;
+    rdfs:range :FunctionalSurface ;
+    owl:inverseOf :establishes .
+
+:establishes a owl:ObjectProperty ;
+    rdfs:label "establishes"@en ;
+    skos:prefLabel "establishes"@en ;
+    rdfs:domain :FunctionalSurface ;
+    rdfs:range :KinematicPair .
 
 :evaluated_by a owl:ObjectProperty ;
     rdfs:label "evaluated by"@en .
@@ -673,6 +689,90 @@ bfo:BFO_0000040 a owl:Class ;
         [ a owl:Restriction ; owl:onProperty :evaluates ; owl:someValuesFrom :CircularRunoutValue ],
         [ a owl:Restriction ; owl:onProperty :evaluates ; owl:someValuesFrom :TotalRunoutValue ],
         [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :DatumAxis ] .
+
+:FunctionalSurface a owl:Class ;
+    rdfs:label "Functional Surface"@en ;
+    skos:prefLabel "Functional surface"@en ;
+    rdfs:comment "A real surface region of a part that ensures a function by contact with a mating surface, thereby establishing a kinematic pair; it bears the geometrical specifications whose conformity guarantees the function (Fr. surface fonctionnelle)."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024>,
+        [ a owl:Restriction ; owl:onProperty :part_of ; owl:someValuesFrom :Part ],
+        [ a owl:Restriction ; owl:onProperty :establishes ; owl:someValuesFrom :KinematicPair ],
+        [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :GeometricalSpecification ] .
+
+:KinematicPair a owl:Class ;
+    rdfs:label "Kinematic Pair"@en ;
+    skos:prefLabel "Kinematic pair"@en ;
+    rdfs:comment "A disposition of an assembly to permit a specified relative motion (degrees of freedom) between two parts in contact through their functional surfaces (Fr. liaison cinematique). It is realizable only if the real geometry keeps the mating functional surfaces within the required fit/clearance, which is why it grounds the functional conditions that the tolerances enforce."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016>,
+        [ a owl:Restriction ; owl:onProperty :inheres_in ; owl:someValuesFrom :Assembly ],
+        [ a owl:Restriction ; owl:onProperty :established_by ;
+          owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ; owl:onClass :FunctionalSurface ] .
+
+:FixedJoint a owl:Class ;
+    rdfs:label "Fixed Joint"@en ;
+    skos:prefLabel "Fixed joint"@en ;
+    rdfs:comment "Rigid connection permitting no relative motion (0 DOF) (Fr. encastrement)."@en ;
+    rdfs:subClassOf :KinematicPair .
+
+:RevoluteJoint a owl:Class ;
+    rdfs:label "Revolute Joint"@en ;
+    skos:prefLabel "Revolute joint"@en ;
+    rdfs:comment "Permits one rotation about an axis (1 DOF) (Fr. liaison pivot)."@en ;
+    rdfs:subClassOf :KinematicPair .
+
+:PrismaticJoint a owl:Class ;
+    rdfs:label "Prismatic Joint"@en ;
+    skos:prefLabel "Prismatic joint"@en ;
+    rdfs:comment "Permits one translation along an axis (1 DOF) (Fr. liaison glissiere)."@en ;
+    rdfs:subClassOf :KinematicPair .
+
+:CylindricalJoint a owl:Class ;
+    rdfs:label "Cylindrical Joint"@en ;
+    skos:prefLabel "Cylindrical joint"@en ;
+    rdfs:comment "Permits one rotation and one translation about/along the same axis (2 DOF) (Fr. liaison pivot glissant)."@en ;
+    rdfs:subClassOf :KinematicPair .
+
+:HelicalJoint a owl:Class ;
+    rdfs:label "Helical Joint"@en ;
+    skos:prefLabel "Helical joint"@en ;
+    rdfs:comment "Permits a coupled rotation and translation along an axis (1 DOF, screw) (Fr. liaison helicoidale)."@en ;
+    rdfs:subClassOf :KinematicPair .
+
+:SphericalJoint a owl:Class ;
+    rdfs:label "Spherical Joint"@en ;
+    skos:prefLabel "Spherical joint"@en ;
+    rdfs:comment "Permits three rotations about a point (3 DOF) (Fr. liaison rotule / spherique)."@en ;
+    rdfs:subClassOf :KinematicPair .
+
+:SlottedSphericalJoint a owl:Class ;
+    rdfs:label "Slotted Spherical Joint"@en ;
+    skos:prefLabel "Slotted spherical joint"@en ;
+    rdfs:comment "Permits two rotations (3 rotations minus one blocked by a pin) (2 DOF) (Fr. liaison spherique a doigt)."@en ;
+    rdfs:subClassOf :KinematicPair .
+
+:PlanarJoint a owl:Class ;
+    rdfs:label "Planar Joint"@en ;
+    skos:prefLabel "Planar joint"@en ;
+    rdfs:comment "Permits two translations and one rotation in a plane (3 DOF) (Fr. liaison appui plan)."@en ;
+    rdfs:subClassOf :KinematicPair .
+
+:CylinderPlaneJoint a owl:Class ;
+    rdfs:label "Cylinder-Plane Joint"@en ;
+    skos:prefLabel "Cylinder-plane joint"@en ;
+    rdfs:comment "Line contact permitting two translations and two rotations (4 DOF) (Fr. liaison lineaire rectiligne)."@en ;
+    rdfs:subClassOf :KinematicPair .
+
+:SphereCylinderJoint a owl:Class ;
+    rdfs:label "Sphere-Cylinder Joint"@en ;
+    skos:prefLabel "Sphere-cylinder joint"@en ;
+    rdfs:comment "Permits one translation and three rotations (4 DOF) (Fr. liaison lineaire annulaire)."@en ;
+    rdfs:subClassOf :KinematicPair .
+
+:PointJoint a owl:Class ;
+    rdfs:label "Point Joint"@en ;
+    skos:prefLabel "Point joint"@en ;
+    rdfs:comment "Point contact permitting two translations and three rotations (5 DOF) (Fr. liaison ponctuelle / sphere-plan)."@en ;
+    rdfs:subClassOf :KinematicPair .
 
 :LeastMaterialCondition a owl:Class ;
     rdfs:label "Least Material Condition"@en ;
