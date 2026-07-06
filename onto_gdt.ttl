@@ -162,6 +162,119 @@ bfo:BFO_0000003 a owl:Class ;
 :specifies_characteristic a owl:ObjectProperty ;
     rdfs:label "specifies characteristic"@en .
 
+# ===== MESTA relations: spatial mereotopology (Region Connection Calculus,
+# Randell 1992 / Smith 1996) between build regions, and temporal relations
+# (Allen's interval algebra, 1983) between fabrication time regions.
+# Property names are fully spelled out; the original one/two-letter symbol
+# is given in each comment for cross-reference to the thesis (Douin 2024). =====
+
+:connected_with a owl:ObjectProperty, owl:SymmetricProperty, owl:ReflexiveProperty ;
+    rdfs:label "connected with"@en ;
+    skos:prefLabel "connected with"@en ;
+    rdfs:comment "Two build regions share at least one common point (Region Connection Calculus primitive 'C', connection). Symmetric and reflexive."@en ;
+    rdfs:domain :BuildRegion ;
+    rdfs:range :BuildRegion .
+
+:disconnected_from a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:label "disconnected from"@en ;
+    skos:prefLabel "disconnected from"@en ;
+    rdfs:comment "Two build regions share no common point (Region Connection Calculus primitive 'DC', disconnected). Symmetric."@en ;
+    rdfs:domain :BuildRegion ;
+    rdfs:range :BuildRegion .
+
+:spatially_part_of a owl:ObjectProperty, owl:TransitiveProperty, owl:ReflexiveProperty ;
+    rdfs:label "spatially part of"@en ;
+    skos:prefLabel "spatially part of"@en ;
+    rdfs:comment "A build region is spatially contained in another (mereotopological parthood primitive 'P'; Smith 1996). Transitive and reflexive."@en ;
+    rdfs:domain :BuildRegion ;
+    rdfs:range :BuildRegion .
+
+:spatially_overlaps a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:label "spatially overlaps"@en ;
+    skos:prefLabel "spatially overlaps"@en ;
+    rdfs:comment "Two build regions share a common part (mereotopological overlap primitive 'O'; Smith 1996). Symmetric."@en ;
+    rdfs:domain :BuildRegion ;
+    rdfs:range :BuildRegion .
+
+:externally_connected_with a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:label "externally connected with"@en ;
+    skos:prefLabel "externally connected with"@en ;
+    rdfs:comment "Two build regions touch at their boundaries but do not overlap (Region Connection Calculus primitive 'EC', externally connected). Symmetric."@en ;
+    rdfs:domain :BuildRegion ;
+    rdfs:range :BuildRegion .
+
+:tangential_proper_part_of a owl:ObjectProperty ;
+    rdfs:label "tangential proper part of"@en ;
+    skos:prefLabel "tangential proper part of"@en ;
+    rdfs:comment "A build region is a proper part of another and touches its boundary (Region Connection Calculus primitive 'TPP', tangential proper part). A kind of spatially part of."@en ;
+    rdfs:subPropertyOf :spatially_part_of ;
+    rdfs:domain :BuildRegion ;
+    rdfs:range :BuildRegion .
+
+:non_tangential_proper_part_of a owl:ObjectProperty ;
+    rdfs:label "non-tangential proper part of"@en ;
+    skos:prefLabel "non-tangential proper part of"@en ;
+    rdfs:comment "A build region is a proper part of another without touching its boundary (Region Connection Calculus primitive 'NTPP', non-tangential proper part; equivalent to Smith's interior part 'IP'). A kind of spatially part of."@en ;
+    rdfs:subPropertyOf :spatially_part_of ;
+    rdfs:domain :BuildRegion ;
+    rdfs:range :BuildRegion .
+
+:spatially_below a owl:ObjectProperty ;
+    rdfs:label "spatially below"@en ;
+    skos:prefLabel "spatially below"@en ;
+    rdfs:comment "A build region lies directly under another along the build direction (directional primitive 'B', below); used to describe overhangs (French: porte-a-faux)."@en ;
+    rdfs:domain :BuildRegion ;
+    rdfs:range :BuildRegion .
+
+:temporally_before a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:label "temporally before"@en ;
+    skos:prefLabel "temporally before"@en ;
+    rdfs:comment "A fabrication time region ends before another begins (Allen's interval algebra relation 'before', 1983). Transitive."@en ;
+    rdfs:domain :FabricationTimeRegion ;
+    rdfs:range :FabricationTimeRegion .
+
+:temporally_meets a owl:ObjectProperty ;
+    rdfs:label "temporally meets"@en ;
+    skos:prefLabel "temporally meets"@en ;
+    rdfs:comment "A fabrication time region ends exactly when another begins (Allen's interval algebra relation 'meets')."@en ;
+    rdfs:domain :FabricationTimeRegion ;
+    rdfs:range :FabricationTimeRegion .
+
+:temporally_overlaps a owl:ObjectProperty ;
+    rdfs:label "temporally overlaps"@en ;
+    skos:prefLabel "temporally overlaps"@en ;
+    rdfs:comment "Two fabrication time regions partially coincide in time (Allen's interval algebra relation 'overlaps')."@en ;
+    rdfs:domain :FabricationTimeRegion ;
+    rdfs:range :FabricationTimeRegion .
+
+:temporally_during a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:label "temporally during"@en ;
+    skos:prefLabel "temporally during"@en ;
+    rdfs:comment "A fabrication time region is fully contained within another (Allen's interval algebra relation 'during'). Transitive."@en ;
+    rdfs:domain :FabricationTimeRegion ;
+    rdfs:range :FabricationTimeRegion .
+
+:temporally_starts a owl:ObjectProperty ;
+    rdfs:label "temporally starts"@en ;
+    skos:prefLabel "temporally starts"@en ;
+    rdfs:comment "Two fabrication time regions begin at the same instant, one ending first (Allen's interval algebra relation 'starts')."@en ;
+    rdfs:domain :FabricationTimeRegion ;
+    rdfs:range :FabricationTimeRegion .
+
+:temporally_finishes a owl:ObjectProperty ;
+    rdfs:label "temporally finishes"@en ;
+    skos:prefLabel "temporally finishes"@en ;
+    rdfs:comment "Two fabrication time regions end at the same instant, one beginning first (Allen's interval algebra relation 'finishes')."@en ;
+    rdfs:domain :FabricationTimeRegion ;
+    rdfs:range :FabricationTimeRegion .
+
+:temporally_equals a owl:ObjectProperty, owl:SymmetricProperty, owl:TransitiveProperty ;
+    rdfs:label "temporally equals"@en ;
+    skos:prefLabel "temporally equals"@en ;
+    rdfs:comment "Two fabrication time regions span exactly the same interval (Allen's interval algebra relation 'equals'). Symmetric and transitive."@en ;
+    rdfs:domain :FabricationTimeRegion ;
+    rdfs:range :FabricationTimeRegion .
+
 :ActualDiameter a owl:Class ;
     rdfs:label "Actual Diameter"@en ;
     skos:prefLabel "Actual diameter"@en ;
