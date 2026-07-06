@@ -641,6 +641,37 @@ bfo:BFO_0000016 a owl:Class ;
         [ a owl:Restriction ; owl:onProperty :evaluated_by ; owl:someValuesFrom :MeasurementProcess ],
         [ a owl:Restriction ; owl:onProperty :evaluated_by ; owl:someValuesFrom :VerificationProcess ] .
 
+:GeometricalCharacteristicValue a owl:Class ;
+    rdfs:label "Geometrical Characteristic Value"@en ;
+    skos:prefLabel "Geometrical characteristic value"@en ;
+    rdfs:comment "A determinate value of a geometrical characteristic (a deviation magnitude or a tolerance limit) of a toleranced feature, obtained from a given source: product specification, simulation, or measurement. As information content it is a generically dependent continuant, distinct from the real quality it is about; its three provenance subclasses are compared for conformity."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        [ a owl:Restriction ; owl:onProperty :is_about ; owl:someValuesFrom :GeometricalCharacteristic ] .
+
+:SpecifiedToleranceValue a owl:Class ;
+    rdfs:label "Specified Tolerance Value"@en ;
+    skos:prefLabel "Specified tolerance value"@en ;
+    rdfs:comment "The allowed limit prescribed by the product specification (the specified tolerance). Source: the GD&T/GPS specification."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        :GeometricalCharacteristicValue,
+        [ a owl:Restriction ; owl:onProperty :part_of ; owl:someValuesFrom :ToleranceSpecification ] .
+
+:PredictedDeviationValue a owl:Class ;
+    rdfs:label "Predicted Deviation Value"@en ;
+    skos:prefLabel "Predicted deviation value"@en ;
+    rdfs:comment "A deviation value predicted for the as-built part by numerical simulation (e.g. distortion), before fabrication. Source: a simulation process."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        :GeometricalCharacteristicValue,
+        [ a owl:Restriction ; owl:onProperty :output_of ; owl:someValuesFrom :SimulationProcess ] .
+
+:MeasuredDeviationValue a owl:Class ;
+    rdfs:label "Measured Deviation Value"@en ;
+    skos:prefLabel "Measured deviation value"@en ;
+    rdfs:comment "A deviation value obtained on the fabricated part by a metrology/measurement process (e.g. the mini-metrology software). Source: a measurement process."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
+        :GeometricalCharacteristicValue,
+        [ a owl:Restriction ; owl:onProperty :output_of ; owl:someValuesFrom :MeasurementProcess ] .
+
 :GeometricalIdentificationProcess a owl:Class ;
     rdfs:label "Geometrical Identification Process"@en ;
     skos:prefLabel "Geometrical identification process"@en ;
@@ -1090,6 +1121,19 @@ bfo:BFO_0000016 a owl:Class ;
         :ToleranceSpecification,
         [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :TolerancedFeature ],
         [ a owl:Restriction ; owl:onProperty :references ; owl:someValuesFrom :DatumAxis ] .
+
+:SimulationProcess a owl:Class ;
+    rdfs:label "Simulation Process"@en ;
+    skos:prefLabel "Simulation process"@en ;
+    rdfs:comment "A numerical process that predicts the geometry or deviations of the as-built part before fabrication; its output is a predicted deviation value."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015>,
+        [ a owl:Restriction ; owl:onProperty :has_output ; owl:someValuesFrom :PredictedDeviationValue ] .
+
+:DistortionSimulationProcess a owl:Class ;
+    rdfs:label "Distortion Simulation Process"@en ;
+    skos:prefLabel "Distortion simulation process"@en ;
+    rdfs:comment "A simulation process predicting the thermo-mechanical distortion of an additively manufactured part (e.g. a Simufact-type solver)."@en ;
+    rdfs:subClassOf :SimulationProcess .
 
 :SkinModelSurface a owl:Class ;
     rdfs:label "Skin Model Surface"@en ;
