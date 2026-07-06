@@ -68,6 +68,9 @@ bfo:BFO_0000148 a owl:Class ;
 bfo:BFO_0000035 a owl:Class ;
     rdfs:label "process boundary"@en .
 
+bfo:BFO_0000003 a owl:Class ;
+    rdfs:label "occurrent"@en .
+
 :applies_to a owl:ObjectProperty ;
     rdfs:label "applies to"@en .
 
@@ -128,6 +131,12 @@ bfo:BFO_0000035 a owl:Class ;
     skos:prefLabel "made of"@en ;
     rdfs:domain :Part ;
     rdfs:range :Material .
+
+:occupies_temporal_region a owl:ObjectProperty ;
+    rdfs:label "occupies temporal region"@en ;
+    skos:prefLabel "occupies temporal region"@en ;
+    rdfs:domain :SpatioTemporalPrimitive ;
+    rdfs:range :FabricationTimeRegion .
 
 :output_of a owl:ObjectProperty ;
     rdfs:label "output of"@en .
@@ -919,6 +928,89 @@ bfo:BFO_0000035 a owl:Class ;
     rdfs:comment "A zero-dimensional (punctual) fabrication time region at a single layer transition, at which spatio-temporal events (appearance, disappearance, merging, separation) occur."@en ;
     rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000148>,
         :FabricationTimeRegion .
+
+# ===== MESTA spatio-temporal primitives (9), the behaviours a build region
+# undergoes from one layer to the next (Douin 2024, Table 2.1 / Fig 2.11).
+# Occurrent-based mapping: instantaneous events are process boundaries,
+# duration-bearing behaviours are processes. =====
+
+:SpatioTemporalPrimitive a owl:Class ;
+    rdfs:label "Spatio-Temporal Primitive"@en ;
+    skos:prefLabel "Spatio-temporal primitive"@en ;
+    rdfs:comment "A named behaviour that a build region undergoes as fabrication advances from one layer to the next; the basic building block of a spatio-temporal description. It has one or more build regions as participants and occupies a fabrication time region."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000003>,
+        [ a owl:Restriction ; owl:onProperty :has_participant ; owl:someValuesFrom :BuildRegion ],
+        [ a owl:Restriction ; owl:onProperty :occupies_temporal_region ; owl:someValuesFrom :FabricationTimeRegion ] .
+
+:SpatioTemporalEvent a owl:Class ;
+    rdfs:label "Spatio-Temporal Event"@en ;
+    skos:prefLabel "Spatio-temporal event"@en ;
+    rdfs:comment "An instantaneous spatio-temporal primitive occurring at a single layer transition (a layer instant); modeled as a process boundary. Events are mutually exclusive and self-sufficient."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000035>,
+        :SpatioTemporalPrimitive,
+        [ a owl:Restriction ; owl:onProperty :occupies_temporal_region ; owl:someValuesFrom :LayerInstant ] .
+
+:SpatioTemporalProcess a owl:Class ;
+    rdfs:label "Spatio-Temporal Process"@en ;
+    skos:prefLabel "Spatio-temporal process"@en ;
+    rdfs:comment "A spatio-temporal primitive that unfolds over an interval of layers (a slice interval); modeled as a process. A surface-variation process may be coupled with auxiliary processes (changing geometry, movement)."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015>,
+        :SpatioTemporalPrimitive,
+        [ a owl:Restriction ; owl:onProperty :occupies_temporal_region ; owl:someValuesFrom :SliceInterval ] .
+
+:Appearance a owl:Class ;
+    rdfs:label "Appearance"@en ;
+    skos:prefLabel "Appearance"@en ;
+    rdfs:comment "Event (simple): a build region comes into existence at a layer instant (French: apparition)."@en ;
+    rdfs:subClassOf :SpatioTemporalEvent .
+
+:Disappearance a owl:Class ;
+    rdfs:label "Disappearance"@en ;
+    skos:prefLabel "Disappearance"@en ;
+    rdfs:comment "Event (simple): a build region ceases to exist at a layer instant (French: disparition)."@en ;
+    rdfs:subClassOf :SpatioTemporalEvent .
+
+:Merging a owl:Class ;
+    rdfs:label "Merging"@en ;
+    skos:prefLabel "Merging"@en ;
+    rdfs:comment "Event (multiple): two build regions join into a single region at a layer instant (French: fusion)."@en ;
+    rdfs:subClassOf :SpatioTemporalEvent .
+
+:Separation a owl:Class ;
+    rdfs:label "Separation"@en ;
+    skos:prefLabel "Separation"@en ;
+    rdfs:comment "Event (multiple): a single build region splits into two regions at a layer instant (French: separation)."@en ;
+    rdfs:subClassOf :SpatioTemporalEvent .
+
+:AreaConstant a owl:Class ;
+    rdfs:label "Constant Area"@en ;
+    skos:prefLabel "Constant area"@en ;
+    rdfs:comment "Surface-variation process: the region's cross-sectional area stays constant across the slice interval (French: aire constante)."@en ;
+    rdfs:subClassOf :SpatioTemporalProcess .
+
+:AreaIncrease a owl:Class ;
+    rdfs:label "Area Increase"@en ;
+    skos:prefLabel "Area increase"@en ;
+    rdfs:comment "Surface-variation process: the region's cross-sectional area grows across the slice interval (French: augmentation de l'aire)."@en ;
+    rdfs:subClassOf :SpatioTemporalProcess .
+
+:AreaDecrease a owl:Class ;
+    rdfs:label "Area Decrease"@en ;
+    skos:prefLabel "Area decrease"@en ;
+    rdfs:comment "Surface-variation process: the region's cross-sectional area shrinks across the slice interval (French: diminution de l'aire)."@en ;
+    rdfs:subClassOf :SpatioTemporalProcess .
+
+:ChangingGeometry a owl:Class ;
+    rdfs:label "Changing Geometry"@en ;
+    skos:prefLabel "Changing geometry"@en ;
+    rdfs:comment "Auxiliary process: the region's cross-sectional shape changes across the slice interval, independently of its area (French: changement de geometrie)."@en ;
+    rdfs:subClassOf :SpatioTemporalProcess .
+
+:Movement a owl:Class ;
+    rdfs:label "Movement"@en ;
+    skos:prefLabel "Movement"@en ;
+    rdfs:comment "Auxiliary process: the region translates (its position shifts) across the slice interval (French: deplacement)."@en ;
+    rdfs:subClassOf :SpatioTemporalProcess .
 
 :MaximumMaterialCondition a owl:Class ;
     rdfs:label "Maximum Material Condition"@en ;
