@@ -1124,6 +1124,186 @@ bfo:BFO_0000003 a owl:Class ;
     rdfs:comment "Auxiliary process: the region translates (its position shifts) across the slice interval (French: deplacement)."@en ;
     rdfs:subClassOf :SpatioTemporalProcess .
 
+# ===== JANUS assembly spatio-temporal primitives (Gruhier et al. 2016,
+# Tables 8 and 13 / Appendix A.1). Changes undergone by spatial regions
+# during the assembly process, classified as instantaneous events or
+# duration-bearing processes, exactly as the additive-manufacturing
+# primitives of MeSTA are. =====
+
+:AssemblyOperation a owl:Class ;
+    rdfs:label "Assembly Operation"@en ;
+    skos:prefLabel "Assembly operation"@en ;
+    rdfs:comment "An operation of the assembly sequence, such as the insertion of one part into another. Assembly operations are a kind of temporal region, namely an interval (Gruhier et al. 2016)."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000038> .
+
+:AssemblySpatioTemporalPrimitive a owl:Class ;
+    rdfs:label "Assembly Spatio-Temporal Primitive"@en ;
+    skos:prefLabel "Assembly spatio-temporal primitive"@en ;
+    rdfs:comment "A change undergone by one or more spatial regions (parts, subassemblies, tools, added entities) during the assembly process; it links the spatial and the temporal dimensions (Gruhier et al. 2016, Table 8)."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000003>,
+        [ a owl:Restriction ; owl:onProperty :has_participant ; owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000004> ],
+        [ a owl:Restriction ; owl:onProperty :occupies_temporal_region ; owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000008> ] .
+
+:AssemblySpatioTemporalEvent a owl:Class ;
+    rdfs:label "Assembly Spatio-Temporal Event"@en ;
+    skos:prefLabel "Assembly spatio-temporal event"@en ;
+    rdfs:comment "An instantaneous assembly primitive: the change happens at a single instant and the number of parts changes. Modeled as a process boundary."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000035>,
+        :AssemblySpatioTemporalPrimitive,
+        [ a owl:Restriction ; owl:onProperty :occupies_temporal_region ; owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000148> ] .
+
+:AssemblySpatioTemporalProcess a owl:Class ;
+    rdfs:label "Assembly Spatio-Temporal Process"@en ;
+    skos:prefLabel "Assembly spatio-temporal process"@en ;
+    rdfs:comment "An assembly primitive unfolding over an interval; it generates a swept volume, the spatio-temporal region occupied by the moving part."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015>,
+        :AssemblySpatioTemporalPrimitive,
+        [ a owl:Restriction ; owl:onProperty :occupies_temporal_region ; owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000038> ] .
+
+:Addition a owl:Class ;
+    rdfs:label "Addition"@en ;
+    skos:prefLabel "Addition"@en ;
+    rdfs:comment "Basic-change event: a spatial region comes to occupy what was the empty region, becoming part of the overall assembly. Example: a missing object is introduced."@en ;
+    rdfs:subClassOf :AssemblySpatioTemporalEvent .
+
+:Deletion a owl:Class ;
+    rdfs:label "Deletion"@en ;
+    skos:prefLabel "Deletion"@en ;
+    rdfs:comment "Basic-change event: a spatial region ceases to be part of the assembly and becomes the empty region. Example: a useless object is removed."@en ;
+    rdfs:subClassOf :AssemblySpatioTemporalEvent .
+
+:Split a owl:Class ;
+    rdfs:label "Split"@en ;
+    skos:prefLabel "Split"@en ;
+    rdfs:comment "Restructuring event: one spatial region is divided into two regions, both derived from it. Example: a complex assembly is decomposed."@en ;
+    rdfs:subClassOf :AssemblySpatioTemporalEvent .
+
+:Union a owl:Class ;
+    rdfs:label "Union"@en ;
+    skos:prefLabel "Union"@en ;
+    rdfs:comment "Restructuring event: two spatial regions are joined into one. Example: a subassembly is created."@en ;
+    rdfs:subClassOf :AssemblySpatioTemporalEvent .
+
+:Move a owl:Class ;
+    rdfs:label "Move"@en ;
+    skos:prefLabel "Move"@en ;
+    rdfs:comment "Move process: a spatial region changes position over an interval, sweeping a spatio-temporal region. Example: placing an object."@en ;
+    rdfs:subClassOf :AssemblySpatioTemporalProcess .
+
+:Rotation a owl:Class ;
+    rdfs:label "Rotation"@en ;
+    skos:prefLabel "Rotation"@en ;
+    rdfs:comment "Move process: a spatial region turns about an assembly skeleton. Example: orienting an object."@en ;
+    rdfs:subClassOf :AssemblySpatioTemporalProcess .
+
+:Permutation a owl:Class ;
+    rdfs:label "Permutation"@en ;
+    skos:prefLabel "Permutation"@en ;
+    rdfs:comment "Replacement process: two spatial regions exchange their positions. Example: correcting a designer oversight."@en ;
+    rdfs:subClassOf :AssemblySpatioTemporalProcess .
+
+:Growing a owl:Class ;
+    rdfs:label "Growing"@en ;
+    skos:prefLabel "Growing"@en ;
+    rdfs:comment "Transformation process: a spatial region increases in size while keeping its identity. Example: an object found to be too small."@en ;
+    rdfs:subClassOf :AssemblySpatioTemporalProcess .
+
+:Decrease a owl:Class ;
+    rdfs:label "Decrease"@en ;
+    skos:prefLabel "Decrease"@en ;
+    rdfs:comment "Transformation process: a spatial region decreases in size while keeping its identity. Example: an object found to be too large."@en ;
+    rdfs:subClassOf :AssemblySpatioTemporalProcess .
+
+:ChangeOfForm a owl:Class ;
+    rdfs:label "Change Of Form"@en ;
+    skos:prefLabel "Change of form"@en ;
+    rdfs:comment "Transformation process: the shape of a spatial region is redefined by the designer. Example: a change of idea during detailed design."@en ;
+    rdfs:subClassOf :AssemblySpatioTemporalProcess .
+
+:Deformation a owl:Class ;
+    rdfs:label "Deformation"@en ;
+    skos:prefLabel "Deformation"@en ;
+    rdfs:comment "Transformation process: the shape of a spatial region is altered by the assembly process itself rather than by design. Example: positioning a rivet."@en ;
+    rdfs:subClassOf :AssemblySpatioTemporalProcess .
+
+:KinematicPairPositioningOperation a owl:Class ;
+    rdfs:label "Kinematic Pair Positioning Operation"@en ;
+    skos:prefLabel "Kinematic pair positioning operation"@en ;
+    rdfs:comment "Move process that brings one part into its final position against another so as to establish a kinematic pair; described with the spatial primitives discrete from, overlaps, crosses and tangent to over successive temporal regions (Gruhier et al. 2016, Table 13 and Appendix A.1)."@en ;
+    rdfs:subClassOf :AssemblySpatioTemporalProcess .
+
+:CylindricalPositioningOperation a owl:Class ;
+    rdfs:label "Cylindrical Positioning Operation"@en ;
+    skos:prefLabel "Cylindrical positioning operation"@en ;
+    rdfs:comment "Positions a part so as to establish a cylindrical joint. Written CylindricalOP by Gruhier et al. (2016)."@en ;
+    rdfs:subClassOf :KinematicPairPositioningOperation .
+
+:PrismaticPositioningOperation a owl:Class ;
+    rdfs:label "Prismatic Positioning Operation"@en ;
+    skos:prefLabel "Prismatic positioning operation"@en ;
+    rdfs:comment "Positions a part so as to establish a prismatic joint. Written PrismaticOP by Gruhier et al. (2016)."@en ;
+    rdfs:subClassOf :KinematicPairPositioningOperation .
+
+:SphericalPositioningOperation a owl:Class ;
+    rdfs:label "Spherical Positioning Operation"@en ;
+    skos:prefLabel "Spherical positioning operation"@en ;
+    rdfs:comment "Positions a part so as to establish a spherical joint. Written SphericalOP by Gruhier et al. (2016)."@en ;
+    rdfs:subClassOf :KinematicPairPositioningOperation .
+
+:RevolutePositioningOperation a owl:Class ;
+    rdfs:label "Revolute Positioning Operation"@en ;
+    skos:prefLabel "Revolute positioning operation"@en ;
+    rdfs:comment "Positions a part so as to establish a revolute joint; at the end of the process the two parts cross and are tangent. Written RevoluteOP by Gruhier et al. (2016)."@en ;
+    rdfs:subClassOf :KinematicPairPositioningOperation .
+
+:PlanarPositioningOperation a owl:Class ;
+    rdfs:label "Planar Positioning Operation"@en ;
+    skos:prefLabel "Planar positioning operation"@en ;
+    rdfs:comment "Positions a part so as to establish a planar joint; at the end of the process the two parts are tangent. Written PlanarOP by Gruhier et al. (2016)."@en ;
+    rdfs:subClassOf :KinematicPairPositioningOperation .
+
+:PointContactPositioningOperation a owl:Class ;
+    rdfs:label "Point Contact Positioning Operation"@en ;
+    skos:prefLabel "Point contact positioning operation"@en ;
+    rdfs:comment "Positions a part so as to establish a point joint. Written PointContactOP by Gruhier et al. (2016)."@en ;
+    rdfs:subClassOf :KinematicPairPositioningOperation .
+
+:LineContactPositioningOperation a owl:Class ;
+    rdfs:label "Line Contact Positioning Operation"@en ;
+    skos:prefLabel "Line contact positioning operation"@en ;
+    rdfs:comment "Positions a part so as to establish a line contact, that is a cylinder-plane joint. Written LineContactOP by Gruhier et al. (2016)."@en ;
+    rdfs:subClassOf :KinematicPairPositioningOperation .
+
+:ScrewPositioningOperation a owl:Class ;
+    rdfs:label "Screw Positioning Operation"@en ;
+    skos:prefLabel "Screw positioning operation"@en ;
+    rdfs:comment "Positions a part so as to establish a helical joint. Written ScrewOP by Gruhier et al. (2016)."@en ;
+    rdfs:subClassOf :KinematicPairPositioningOperation .
+
+:TechnologicalPairPositioningOperation a owl:Class ;
+    rdfs:label "Technological Pair Positioning Operation"@en ;
+    skos:prefLabel "Technological pair positioning operation"@en ;
+    rdfs:comment "Process that joins two parts by a technological means (welding, brazing, adhesive bonding, riveting, mechanical fastening and so on), possibly consuming tools and added entities."@en ;
+    rdfs:subClassOf :AssemblySpatioTemporalProcess .
+
+:PermanentJoiningWithAddedPart a owl:Class ;
+    rdfs:label "Permanent Joining With Added Part"@en ;
+    skos:prefLabel "Permanent joining with added part"@en ;
+    rdfs:comment "Technological pair positioning that permanently joins two parts using an added entity, for instance gas welding, brazing, adhesive bonding, riveting or nail assembly."@en ;
+    rdfs:subClassOf :TechnologicalPairPositioningOperation .
+
+:PermanentJoiningWithoutAddedPart a owl:Class ;
+    rdfs:label "Permanent Joining Without Added Part"@en ;
+    skos:prefLabel "Permanent joining without added part"@en ;
+    rdfs:comment "Technological pair positioning that permanently joins two parts without any added entity, for instance arc welding, spot welding, clinching, crimping or an interference fit."@en ;
+    rdfs:subClassOf :TechnologicalPairPositioningOperation .
+
+:NonPermanentJoiningWithAddedPart a owl:Class ;
+    rdfs:label "Non-Permanent Joining With Added Part"@en ;
+    skos:prefLabel "Non-permanent joining with added part"@en ;
+    rdfs:comment "Technological pair positioning that joins two parts reversibly using an added entity, namely mechanical fastening by threaded fasteners. Gruhier et al. (2016) state that a non-permanent technological pair without an added entity is not possible, so no such class is declared."@en ;
+    rdfs:subClassOf :TechnologicalPairPositioningOperation .
+
 :MaximumMaterialCondition a owl:Class ;
     rdfs:label "Maximum Material Condition"@en ;
     skos:prefLabel "Maximum material condition"@en ;
