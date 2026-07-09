@@ -162,118 +162,140 @@ bfo:BFO_0000003 a owl:Class ;
 :specifies_characteristic a owl:ObjectProperty ;
     rdfs:label "specifies characteristic"@en .
 
-# ===== MESTA relations: spatial mereotopology (Region Connection Calculus,
-# Randell 1992 / Smith 1996) between build regions, and temporal relations
-# (Allen's interval algebra, 1983) between fabrication time regions.
-# Property names are fully spelled out; the original one/two-letter symbol
-# is given in each comment for cross-reference to the thesis (Douin 2024). =====
-
-:connected_with a owl:ObjectProperty, owl:SymmetricProperty, owl:ReflexiveProperty ;
-    rdfs:label "connected with"@en ;
-    skos:prefLabel "connected with"@en ;
-    rdfs:comment "Two build regions share at least one common point (Region Connection Calculus primitive 'C', connection). Symmetric and reflexive."@en ;
-    rdfs:domain :BuildRegion ;
-    rdfs:range :BuildRegion .
-
-:disconnected_from a owl:ObjectProperty, owl:SymmetricProperty ;
-    rdfs:label "disconnected from"@en ;
-    skos:prefLabel "disconnected from"@en ;
-    rdfs:comment "Two build regions share no common point (Region Connection Calculus primitive 'DC', disconnected). Symmetric."@en ;
-    rdfs:domain :BuildRegion ;
-    rdfs:range :BuildRegion .
+# ===== JANUS / MeSTA relations =====
+# Spatial mereotopological primitives of Smith (1996), as tabulated by
+# Gruhier et al. (2016, Table 4) and reused by the MeSTA theory (Douin 2024).
+# They hold between spatial regions: parts, assemblies, build regions,
+# geometric skeletons and the empty region, hence the wide BFO independent
+# continuant domain and range. Property names are fully spelled out; the
+# original one- or two-letter symbol is recalled in each comment.
 
 :spatially_part_of a owl:ObjectProperty, owl:TransitiveProperty, owl:ReflexiveProperty ;
     rdfs:label "spatially part of"@en ;
     skos:prefLabel "spatially part of"@en ;
-    rdfs:comment "A build region is spatially contained in another (mereotopological parthood primitive 'P'; Smith 1996). Transitive and reflexive."@en ;
-    rdfs:domain :BuildRegion ;
-    rdfs:range :BuildRegion .
+    rdfs:comment "x is Part of y: every region overlapping x also is spatially part of y (Smith 1996 primitive 'P'). Transitive and reflexive."@en ;
+    rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000004> ;
+    rdfs:range <http://purl.obolibrary.org/obo/BFO_0000004> .
+
+:interior_part_of a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:label "interior part of"@en ;
+    skos:prefLabel "interior part of"@en ;
+    rdfs:comment "x is InteriorPart of y: x is spatially part of y without being tangent to it (Smith 1996 primitive 'IP'); equivalent to the non-tangential proper part of the Region Connection Calculus. A kind of spatially part of."@en ;
+    rdfs:subPropertyOf :spatially_part_of ;
+    rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000004> ;
+    rdfs:range <http://purl.obolibrary.org/obo/BFO_0000004> .
 
 :spatially_overlaps a owl:ObjectProperty, owl:SymmetricProperty ;
     rdfs:label "spatially overlaps"@en ;
     skos:prefLabel "spatially overlaps"@en ;
-    rdfs:comment "Two build regions share a common part (mereotopological overlap primitive 'O'; Smith 1996). Symmetric."@en ;
-    rdfs:domain :BuildRegion ;
-    rdfs:range :BuildRegion .
+    rdfs:comment "x Overlaps y: some region is spatially part of both x and y (Smith 1996 primitive 'O'). Symmetric."@en ;
+    rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000004> ;
+    rdfs:range <http://purl.obolibrary.org/obo/BFO_0000004> .
 
-:externally_connected_with a owl:ObjectProperty, owl:SymmetricProperty ;
-    rdfs:label "externally connected with"@en ;
-    skos:prefLabel "externally connected with"@en ;
-    rdfs:comment "Two build regions touch at their boundaries but do not overlap (Region Connection Calculus primitive 'EC', externally connected). Symmetric."@en ;
-    rdfs:domain :BuildRegion ;
-    rdfs:range :BuildRegion .
+:discrete_from a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:label "discrete from"@en ;
+    skos:prefLabel "discrete from"@en ;
+    rdfs:comment "x is Discrete from y: x and y do not overlap, i.e. there is no contact between them (Smith 1996 primitive 'D'). Symmetric."@en ;
+    rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000004> ;
+    rdfs:range <http://purl.obolibrary.org/obo/BFO_0000004> .
 
-:tangential_proper_part_of a owl:ObjectProperty ;
-    rdfs:label "tangential proper part of"@en ;
-    skos:prefLabel "tangential proper part of"@en ;
-    rdfs:comment "A build region is a proper part of another and touches its boundary (Region Connection Calculus primitive 'TPP', tangential proper part). A kind of spatially part of."@en ;
-    rdfs:subPropertyOf :spatially_part_of ;
-    rdfs:domain :BuildRegion ;
-    rdfs:range :BuildRegion .
+:crosses a owl:ObjectProperty ;
+    rdfs:label "crosses"@en ;
+    skos:prefLabel "crosses"@en ;
+    rdfs:comment "x Crosses y: x is neither spatially part of y nor discrete from y (Smith 1996 primitive 'X'); used for a part passing through another during assembly."@en ;
+    rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000004> ;
+    rdfs:range <http://purl.obolibrary.org/obo/BFO_0000004> .
 
-:non_tangential_proper_part_of a owl:ObjectProperty ;
-    rdfs:label "non-tangential proper part of"@en ;
-    skos:prefLabel "non-tangential proper part of"@en ;
-    rdfs:comment "A build region is a proper part of another without touching its boundary (Region Connection Calculus primitive 'NTPP', non-tangential proper part; equivalent to Smith's interior part 'IP'). A kind of spatially part of."@en ;
-    rdfs:subPropertyOf :spatially_part_of ;
-    rdfs:domain :BuildRegion ;
-    rdfs:range :BuildRegion .
+:tangent_to a owl:ObjectProperty ;
+    rdfs:label "tangent to"@en ;
+    skos:prefLabel "tangent to"@en ;
+    rdfs:comment "x Tangent y: some region spatially part of x is a boundary of y, that is, x touches y (Smith 1996 primitive 'T')."@en ;
+    rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000004> ;
+    rdfs:range <http://purl.obolibrary.org/obo/BFO_0000004> .
 
-:spatially_below a owl:ObjectProperty ;
-    rdfs:label "spatially below"@en ;
-    skos:prefLabel "spatially below"@en ;
-    rdfs:comment "A build region lies directly under another along the build direction (directional primitive 'B', below); used to describe overhangs (French: porte-a-faux)."@en ;
-    rdfs:domain :BuildRegion ;
-    rdfs:range :BuildRegion .
+:boundary_of a owl:ObjectProperty ;
+    rdfs:label "boundary of"@en ;
+    skos:prefLabel "boundary of"@en ;
+    rdfs:comment "x is Boundary of y: every region spatially part of x straddles y (Smith 1996 primitive 'B'). 'B' denotes a boundary, not a direction."@en ;
+    rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000004> ;
+    rdfs:range <http://purl.obolibrary.org/obo/BFO_0000004> .
 
-:temporally_before a owl:ObjectProperty, owl:TransitiveProperty ;
-    rdfs:label "temporally before"@en ;
-    skos:prefLabel "temporally before"@en ;
-    rdfs:comment "A fabrication time region ends before another begins (Allen's interval algebra relation 'before', 1983). Transitive."@en ;
-    rdfs:domain :FabricationTimeRegion ;
-    rdfs:range :FabricationTimeRegion .
+:straddles a owl:ObjectProperty ;
+    rdfs:label "straddles"@en ;
+    skos:prefLabel "straddles"@en ;
+    rdfs:comment "x Straddles y: every region having x as an interior part crosses y (Smith 1996 primitive 'St')."@en ;
+    rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000004> ;
+    rdfs:range <http://purl.obolibrary.org/obo/BFO_0000004> .
 
-:temporally_meets a owl:ObjectProperty ;
-    rdfs:label "temporally meets"@en ;
-    skos:prefLabel "temporally meets"@en ;
-    rdfs:comment "A fabrication time region ends exactly when another begins (Allen's interval algebra relation 'meets')."@en ;
-    rdfs:domain :FabricationTimeRegion ;
-    rdfs:range :FabricationTimeRegion .
+# Temporal primitives (Gruhier et al. 2016, Table 5), inspired by Allen's
+# interval algebra (1983). They hold between temporal regions, which may be
+# intervals (assembly operations, slice intervals) or instants.
 
-:temporally_overlaps a owl:ObjectProperty ;
+:temporally_part_of a owl:ObjectProperty, owl:TransitiveProperty, owl:ReflexiveProperty ;
+    rdfs:label "temporally part of"@en ;
+    skos:prefLabel "temporally part of"@en ;
+    rdfs:comment "b is Temporally Part of a: every temporal region temporally overlapping b is temporally part of a (Gruhier 2016 primitive 'Pt'). Transitive and reflexive."@en ;
+    rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000008> ;
+    rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> .
+
+:start_temporally_part_of a owl:ObjectProperty ;
+    rdfs:label "start temporally part of"@en ;
+    skos:prefLabel "start temporally part of"@en ;
+    rdfs:comment "b is Start Temporally Part of a: b is temporally part of a and begins with it (Gruhier 2016 primitive 'Pts'). A kind of temporally part of."@en ;
+    rdfs:subPropertyOf :temporally_part_of ;
+    rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000008> ;
+    rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> .
+
+:finish_temporally_part_of a owl:ObjectProperty ;
+    rdfs:label "finish temporally part of"@en ;
+    skos:prefLabel "finish temporally part of"@en ;
+    rdfs:comment "b is Finish Temporally Part of a: b is temporally part of a and ends with it (Gruhier 2016 primitive 'Ptf'). A kind of temporally part of."@en ;
+    rdfs:subPropertyOf :temporally_part_of ;
+    rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000008> ;
+    rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> .
+
+:temporally_interior_part_of a owl:ObjectProperty ;
+    rdfs:label "temporally interior part of"@en ;
+    skos:prefLabel "temporally interior part of"@en ;
+    rdfs:comment "b is Temporally Interior Part of a: b is temporally part of a while sharing neither its start nor its end (Gruhier 2016 primitive 'IPt'). A kind of temporally part of."@en ;
+    rdfs:subPropertyOf :temporally_part_of ;
+    rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000008> ;
+    rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> .
+
+:temporally_overlaps a owl:ObjectProperty, owl:SymmetricProperty ;
     rdfs:label "temporally overlaps"@en ;
     skos:prefLabel "temporally overlaps"@en ;
-    rdfs:comment "Two fabrication time regions partially coincide in time (Allen's interval algebra relation 'overlaps')."@en ;
-    rdfs:domain :FabricationTimeRegion ;
-    rdfs:range :FabricationTimeRegion .
+    rdfs:comment "b Temporally Overlaps a: some temporal region is temporally part of both (Gruhier 2016 primitive 'Ot'). Symmetric."@en ;
+    rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000008> ;
+    rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> .
 
-:temporally_during a owl:ObjectProperty, owl:TransitiveProperty ;
-    rdfs:label "temporally during"@en ;
-    skos:prefLabel "temporally during"@en ;
-    rdfs:comment "A fabrication time region is fully contained within another (Allen's interval algebra relation 'during'). Transitive."@en ;
-    rdfs:domain :FabricationTimeRegion ;
-    rdfs:range :FabricationTimeRegion .
+:temporally_precedes a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:label "temporally precedes"@en ;
+    skos:prefLabel "temporally precedes"@en ;
+    rdfs:comment "a Temporally Precedes b: a ends before b begins (Gruhier 2016 primitive 'tp'). Transitive."@en ;
+    rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000008> ;
+    rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> .
 
-:temporally_starts a owl:ObjectProperty ;
-    rdfs:label "temporally starts"@en ;
-    skos:prefLabel "temporally starts"@en ;
-    rdfs:comment "Two fabrication time regions begin at the same instant, one ending first (Allen's interval algebra relation 'starts')."@en ;
-    rdfs:domain :FabricationTimeRegion ;
-    rdfs:range :FabricationTimeRegion .
+:temporally_tangent_to a owl:ObjectProperty ;
+    rdfs:label "temporally tangent to"@en ;
+    skos:prefLabel "temporally tangent to"@en ;
+    rdfs:comment "b is Temporally Tangent of a: a temporal region starting a is a temporal boundary of b, that is, a ends exactly when b begins (Gruhier 2016 primitive 'Tt')."@en ;
+    rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000008> ;
+    rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> .
 
-:temporally_finishes a owl:ObjectProperty ;
-    rdfs:label "temporally finishes"@en ;
-    skos:prefLabel "temporally finishes"@en ;
-    rdfs:comment "Two fabrication time regions end at the same instant, one beginning first (Allen's interval algebra relation 'finishes')."@en ;
-    rdfs:domain :FabricationTimeRegion ;
-    rdfs:range :FabricationTimeRegion .
+:temporally_equal_to a owl:ObjectProperty, owl:SymmetricProperty, owl:TransitiveProperty ;
+    rdfs:label "temporally equal to"@en ;
+    skos:prefLabel "temporally equal to"@en ;
+    rdfs:comment "b is Temporally Equal to a: each is a temporal interior part of the other, so both span the same interval (Gruhier 2016 primitive 'te'). Symmetric and transitive."@en ;
+    rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000008> ;
+    rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> .
 
-:temporally_equals a owl:ObjectProperty, owl:SymmetricProperty, owl:TransitiveProperty ;
-    rdfs:label "temporally equals"@en ;
-    skos:prefLabel "temporally equals"@en ;
-    rdfs:comment "Two fabrication time regions span exactly the same interval (Allen's interval algebra relation 'equals'). Symmetric and transitive."@en ;
-    rdfs:domain :FabricationTimeRegion ;
-    rdfs:range :FabricationTimeRegion .
+:temporal_boundary_of a owl:ObjectProperty ;
+    rdfs:label "temporal boundary of"@en ;
+    skos:prefLabel "temporal boundary of"@en ;
+    rdfs:comment "b is a Temporal Boundary of a: the instant bounding the temporal region a (Gruhier 2016 primitive 'Bt'); used to define temporal tangency."@en ;
+    rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000008> ;
+    rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> .
 
 :AllAroundSpecification a owl:Class ;
     rdfs:label "All Around Specification"@en ;
