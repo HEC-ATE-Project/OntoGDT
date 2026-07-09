@@ -275,30 +275,6 @@ bfo:BFO_0000003 a owl:Class ;
     rdfs:domain :FabricationTimeRegion ;
     rdfs:range :FabricationTimeRegion .
 
-:ActualDiameter a owl:Class ;
-    rdfs:label "Actual Diameter"@en ;
-    skos:prefLabel "Actual diameter"@en ;
-    rdfs:comment "A real property of the feature, not of the drawing."@en ;
-    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019>,
-        [ a owl:Restriction ; owl:onProperty :inheres_in ; owl:someValuesFrom :FeatureOfSize ],
-        [ a owl:Restriction ; owl:onProperty :evaluated_by ; owl:someValuesFrom :MeasurementProcess ] .
-
-:ActualLength a owl:Class ;
-    rdfs:label "Actual Length"@en ;
-    skos:prefLabel "Actual length"@en ;
-    rdfs:comment "A real property of the part."@en ;
-    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019>,
-        [ a owl:Restriction ; owl:onProperty :inheres_in ; owl:someValuesFrom :Part ],
-        [ a owl:Restriction ; owl:onProperty :evaluated_by ; owl:someValuesFrom :MeasurementProcess ] .
-
-:ActualThickness a owl:Class ;
-    rdfs:label "Actual Thickness"@en ;
-    skos:prefLabel "Actual thickness"@en ;
-    rdfs:comment "A real measurable property of the part."@en ;
-    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019>,
-        [ a owl:Restriction ; owl:onProperty :inheres_in ; owl:someValuesFrom :Part ],
-        [ a owl:Restriction ; owl:onProperty :evaluated_by ; owl:someValuesFrom :MeasurementProcess ] .
-
 :AllAroundSpecification a owl:Class ;
     rdfs:label "All Around Specification"@en ;
     skos:prefLabel "All around specification"@en ;
@@ -728,7 +704,7 @@ bfo:BFO_0000003 a owl:Class ;
     rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024>,
         [ a owl:Restriction ; owl:onProperty :part_of ; owl:someValuesFrom :Part ],
         [ a owl:Restriction ; owl:onProperty :bearer_of ; owl:someValuesFrom :LocalSize ],
-        [ a owl:Restriction ; owl:onProperty :bearer_of ; owl:someValuesFrom :ActualDiameter ],
+        [ a owl:Restriction ; owl:onProperty :bearer_of ; owl:someValuesFrom :MeasuredDiameter ],
         [ a owl:Restriction ; owl:onProperty :bearer_of ; owl:someValuesFrom :MaximumMaterialCondition ],
         [ a owl:Restriction ; owl:onProperty :bearer_of ; owl:someValuesFrom :LeastMaterialCondition ],
         [ a owl:Restriction ; owl:onProperty :referenced_by ; owl:someValuesFrom :EnvelopeRequirement ],
@@ -1168,11 +1144,35 @@ bfo:BFO_0000003 a owl:Class ;
     rdfs:comment "Directed energy deposition additive process."@en ;
     rdfs:subClassOf :AdditiveManufacturingProcess .
 
-:WAAMProcess a owl:Class ;
-    rdfs:label "Wire Arc Additive Manufacturing Process"@en ;
-    skos:prefLabel "WAAM process"@en ;
-    rdfs:comment "Wire-arc additive manufacturing process."@en ;
+:MIMProcess a owl:Class ;
+    rdfs:label "Metal Injection Moulding Process"@en ;
+    skos:prefLabel "Metal injection moulding process"@en ;
+    rdfs:comment "A metal-injection-moulding-like process, building the part by material addition; still an active research topic and treated here as additive manufacturing."@en ;
     rdfs:subClassOf :AdditiveManufacturingProcess .
+
+:MeasuredDiameter a owl:Class ;
+    rdfs:label "Measured Diameter"@en ;
+    skos:prefLabel "Measured diameter"@en ;
+    rdfs:comment "The diameter of a real feature of size as obtained by the metrology software, not a value on the drawing. Formerly named Actual Diameter; 'measured' names the provenance, consistent with :MeasuredDeviationValue."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019>,
+        [ a owl:Restriction ; owl:onProperty :inheres_in ; owl:someValuesFrom :FeatureOfSize ],
+        [ a owl:Restriction ; owl:onProperty :evaluated_by ; owl:someValuesFrom :MeasurementProcess ] .
+
+:MeasuredLength a owl:Class ;
+    rdfs:label "Measured Length"@en ;
+    skos:prefLabel "Measured length"@en ;
+    rdfs:comment "The length of a real part as obtained by the metrology software. Formerly named Actual Length."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019>,
+        [ a owl:Restriction ; owl:onProperty :inheres_in ; owl:someValuesFrom :Part ],
+        [ a owl:Restriction ; owl:onProperty :evaluated_by ; owl:someValuesFrom :MeasurementProcess ] .
+
+:MeasuredThickness a owl:Class ;
+    rdfs:label "Measured Thickness"@en ;
+    skos:prefLabel "Measured thickness"@en ;
+    rdfs:comment "The thickness of a real part as obtained by the metrology software. Formerly named Actual Thickness."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019>,
+        [ a owl:Restriction ; owl:onProperty :inheres_in ; owl:someValuesFrom :Part ],
+        [ a owl:Restriction ; owl:onProperty :evaluated_by ; owl:someValuesFrom :MeasurementProcess ] .
 
 :MeasurementProcess a owl:Class ;
     rdfs:label "Measurement Process"@en ;
@@ -1207,7 +1207,7 @@ bfo:BFO_0000003 a owl:Class ;
     rdfs:comment "A prescribed nominal value, not a borne property of the part."@en ;
     rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
         :DimensionSpecification,
-        [ a owl:Restriction ; owl:onProperty :specifies_characteristic ; owl:someValuesFrom :ActualDiameter ],
+        [ a owl:Restriction ; owl:onProperty :specifies_characteristic ; owl:someValuesFrom :MeasuredDiameter ],
         [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :FeatureOfSize ] .
 
 :NominalLengthSpecification a owl:Class ;
@@ -1216,7 +1216,7 @@ bfo:BFO_0000003 a owl:Class ;
     rdfs:comment "A target value in the design definition."@en ;
     rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031>,
         :DimensionSpecification,
-        [ a owl:Restriction ; owl:onProperty :specifies_characteristic ; owl:someValuesFrom :ActualLength ],
+        [ a owl:Restriction ; owl:onProperty :specifies_characteristic ; owl:someValuesFrom :MeasuredLength ],
         [ a owl:Restriction ; owl:onProperty :applies_to ; owl:someValuesFrom :Part ] .
 
 :NonIdealGeometricElement a owl:Class ;
