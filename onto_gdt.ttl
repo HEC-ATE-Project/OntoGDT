@@ -135,8 +135,9 @@ bfo:BFO_0000003 a owl:Class ;
 :occupies_temporal_region a owl:ObjectProperty ;
     rdfs:label "occupies temporal region"@en ;
     skos:prefLabel "occupies temporal region"@en ;
-    rdfs:domain :SpatioTemporalPrimitive ;
-    rdfs:range :FabricationTimeRegion .
+    rdfs:comment "Relates an occurrent -- a spatio-temporal primitive of either the additive-manufacturing theory or the assembly theory -- to the temporal region it takes up."@en ;
+    rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000003> ;
+    rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> .
 
 :output_of a owl:ObjectProperty ;
     rdfs:label "output of"@en .
@@ -234,14 +235,14 @@ bfo:BFO_0000003 a owl:Class ;
 :temporally_part_of a owl:ObjectProperty, owl:TransitiveProperty, owl:ReflexiveProperty ;
     rdfs:label "temporally part of"@en ;
     skos:prefLabel "temporally part of"@en ;
-    rdfs:comment "b is Temporally Part of a: every temporal region temporally overlapping b is temporally part of a (Gruhier 2016 primitive 'Pt'). Transitive and reflexive."@en ;
+    rdfs:comment "b is Temporally Part of a: every temporal region temporally overlapping b is temporally part of a (Gruhier 2016 primitive 'Pt'). Transitive and reflexive. Corresponds to the disjunction of Allen's (1983) interval relations during, starts, finishes and equals."@en ;
     rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000008> ;
     rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> .
 
 :start_temporally_part_of a owl:ObjectProperty ;
     rdfs:label "start temporally part of"@en ;
     skos:prefLabel "start temporally part of"@en ;
-    rdfs:comment "b is Start Temporally Part of a: b is temporally part of a and begins with it (Gruhier 2016 primitive 'Pts'). A kind of temporally part of."@en ;
+    rdfs:comment "b is Start Temporally Part of a: b is temporally part of a and begins with it (Gruhier 2016 primitive 'Pts'). A kind of temporally part of. Corresponds to Allen's (1983) interval relation 'starts' (inverse: started by)."@en ;
     rdfs:subPropertyOf :temporally_part_of ;
     rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000008> ;
     rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> .
@@ -249,7 +250,7 @@ bfo:BFO_0000003 a owl:Class ;
 :finish_temporally_part_of a owl:ObjectProperty ;
     rdfs:label "finish temporally part of"@en ;
     skos:prefLabel "finish temporally part of"@en ;
-    rdfs:comment "b is Finish Temporally Part of a: b is temporally part of a and ends with it (Gruhier 2016 primitive 'Ptf'). A kind of temporally part of."@en ;
+    rdfs:comment "b is Finish Temporally Part of a: b is temporally part of a and ends with it (Gruhier 2016 primitive 'Ptf'). A kind of temporally part of. Corresponds to Allen's (1983) interval relation 'finishes' (inverse: finished by)."@en ;
     rdfs:subPropertyOf :temporally_part_of ;
     rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000008> ;
     rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> .
@@ -257,7 +258,7 @@ bfo:BFO_0000003 a owl:Class ;
 :temporally_interior_part_of a owl:ObjectProperty ;
     rdfs:label "temporally interior part of"@en ;
     skos:prefLabel "temporally interior part of"@en ;
-    rdfs:comment "b is Temporally Interior Part of a: b is temporally part of a while sharing neither its start nor its end (Gruhier 2016 primitive 'IPt'). A kind of temporally part of."@en ;
+    rdfs:comment "b is Temporally Interior Part of a: b is temporally part of a while sharing neither its start nor its end (Gruhier 2016 primitive 'IPt'). A kind of temporally part of. Corresponds to Allen's (1983) interval relation 'during' (inverse: contains)."@en ;
     rdfs:subPropertyOf :temporally_part_of ;
     rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000008> ;
     rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> .
@@ -265,35 +266,35 @@ bfo:BFO_0000003 a owl:Class ;
 :temporally_overlaps a owl:ObjectProperty, owl:SymmetricProperty ;
     rdfs:label "temporally overlaps"@en ;
     skos:prefLabel "temporally overlaps"@en ;
-    rdfs:comment "b Temporally Overlaps a: some temporal region is temporally part of both (Gruhier 2016 primitive 'Ot'). Symmetric."@en ;
+    rdfs:comment "b Temporally Overlaps a: some temporal region is temporally part of both (Gruhier 2016 primitive 'Ot'). Symmetric. Corresponds to Allen's (1983) interval relation 'overlaps' (inverse: overlapped by)."@en ;
     rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000008> ;
     rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> .
 
 :temporally_precedes a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:label "temporally precedes"@en ;
     skos:prefLabel "temporally precedes"@en ;
-    rdfs:comment "a Temporally Precedes b: a ends before b begins (Gruhier 2016 primitive 'tp'). Transitive."@en ;
+    rdfs:comment "a Temporally Precedes b: a ends before b begins (Gruhier 2016 primitive 'tp'). Transitive. Corresponds to Allen's (1983) interval relation 'before' (inverse: after)."@en ;
     rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000008> ;
     rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> .
 
 :temporally_tangent_to a owl:ObjectProperty ;
     rdfs:label "temporally tangent to"@en ;
     skos:prefLabel "temporally tangent to"@en ;
-    rdfs:comment "b is Temporally Tangent of a: a temporal region starting a is a temporal boundary of b, that is, a ends exactly when b begins (Gruhier 2016 primitive 'Tt')."@en ;
+    rdfs:comment "b is Temporally Tangent of a: a temporal region starting a is a temporal boundary of b, that is, a ends exactly when b begins (Gruhier 2016 primitive 'Tt'). Corresponds to Allen's (1983) interval relation 'meets' (inverse: met by)."@en ;
     rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000008> ;
     rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> .
 
 :temporally_equal_to a owl:ObjectProperty, owl:SymmetricProperty, owl:TransitiveProperty ;
     rdfs:label "temporally equal to"@en ;
     skos:prefLabel "temporally equal to"@en ;
-    rdfs:comment "b is Temporally Equal to a: each is a temporal interior part of the other, so both span the same interval (Gruhier 2016 primitive 'te'). Symmetric and transitive."@en ;
+    rdfs:comment "b is Temporally Equal to a: each is a temporal interior part of the other, so both span the same interval (Gruhier 2016 primitive 'te'). Symmetric and transitive. Corresponds to Allen's (1983) interval relation 'equals'."@en ;
     rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000008> ;
     rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> .
 
 :temporal_boundary_of a owl:ObjectProperty ;
     rdfs:label "temporal boundary of"@en ;
     skos:prefLabel "temporal boundary of"@en ;
-    rdfs:comment "b is a Temporal Boundary of a: the instant bounding the temporal region a (Gruhier 2016 primitive 'Bt'); used to define temporal tangency."@en ;
+    rdfs:comment "b is a Temporal Boundary of a: the instant bounding the temporal region a (Gruhier 2016 primitive 'Bt'); used to define temporal tangency. It has no counterpart among Allen's (1983) interval relations, which relate intervals rather than their bounding instants."@en ;
     rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000008> ;
     rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> .
 
