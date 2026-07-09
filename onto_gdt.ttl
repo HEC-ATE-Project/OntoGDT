@@ -266,7 +266,7 @@ bfo:BFO_0000003 a owl:Class ;
 :temporally_overlaps a owl:ObjectProperty, owl:SymmetricProperty ;
     rdfs:label "temporally overlaps"@en ;
     skos:prefLabel "temporally overlaps"@en ;
-    rdfs:comment "b Temporally Overlaps a: some temporal region is temporally part of both (Gruhier 2016 primitive 'Ot'). Symmetric. Corresponds to Allen's (1983) interval relation 'overlaps' (inverse: overlapped by)."@en ;
+    rdfs:comment "b Temporally Overlaps a: some temporal region is temporally part of both (Gruhier 2016 primitive 'Ot'). Symmetric, hence its own inverse: it subsumes both of Allen's (1983) interval relations 'overlaps' and 'overlapped by'."@en ;
     rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000008> ;
     rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> .
 
@@ -287,7 +287,7 @@ bfo:BFO_0000003 a owl:Class ;
 :temporally_equal_to a owl:ObjectProperty, owl:SymmetricProperty, owl:TransitiveProperty ;
     rdfs:label "temporally equal to"@en ;
     skos:prefLabel "temporally equal to"@en ;
-    rdfs:comment "b is Temporally Equal to a: each is a temporal interior part of the other, so both span the same interval (Gruhier 2016 primitive 'te'). Symmetric and transitive. Corresponds to Allen's (1983) interval relation 'equals'."@en ;
+    rdfs:comment "b is Temporally Equal to a: each is a temporal interior part of the other, so both span the same interval (Gruhier 2016 primitive 'te'). Symmetric and transitive, hence its own inverse. Corresponds to Allen's (1983) interval relation 'equals', which has no converse."@en ;
     rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000008> ;
     rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> .
 
@@ -295,6 +295,64 @@ bfo:BFO_0000003 a owl:Class ;
     rdfs:label "temporal boundary of"@en ;
     skos:prefLabel "temporal boundary of"@en ;
     rdfs:comment "b is a Temporal Boundary of a: the instant bounding the temporal region a (Gruhier 2016 primitive 'Bt'); used to define temporal tangency. It has no counterpart among Allen's (1983) interval relations, which relate intervals rather than their bounding instants."@en ;
+    rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000008> ;
+    rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> .
+
+# Converse temporal properties. Allen (1983) defines thirteen relations:
+# seven base relations plus six converses ('equals' being symmetric). The
+# base relations are given above under the names of Gruhier et al. (2016);
+# their converses are declared here with owl:inverseOf so that a reasoner
+# can traverse the temporal order in both directions. 'overlaps' needs no
+# converse here because the Gruhier formulation of it is symmetric.
+
+:temporally_has_part a owl:ObjectProperty, owl:TransitiveProperty, owl:ReflexiveProperty ;
+    rdfs:label "temporally has part"@en ;
+    skos:prefLabel "temporally has part"@en ;
+    rdfs:comment "a Temporally Has Part b: the converse of temporally part of (Gruhier 2016 primitive 'Pt'). Corresponds to the converse of the disjunction of Allen's (1983) interval relations during, starts, finishes and equals."@en ;
+    owl:inverseOf :temporally_part_of ;
+    rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000008> ;
+    rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> .
+
+:temporally_started_by a owl:ObjectProperty ;
+    rdfs:label "temporally started by"@en ;
+    skos:prefLabel "temporally started by"@en ;
+    rdfs:comment "a is Temporally Started By b: the converse of start temporally part of (Gruhier 2016 primitive 'Pts'). A kind of temporally has part. Corresponds to Allen's (1983) interval relation 'started by'."@en ;
+    owl:inverseOf :start_temporally_part_of ;
+    rdfs:subPropertyOf :temporally_has_part ;
+    rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000008> ;
+    rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> .
+
+:temporally_finished_by a owl:ObjectProperty ;
+    rdfs:label "temporally finished by"@en ;
+    skos:prefLabel "temporally finished by"@en ;
+    rdfs:comment "a is Temporally Finished By b: the converse of finish temporally part of (Gruhier 2016 primitive 'Ptf'). A kind of temporally has part. Corresponds to Allen's (1983) interval relation 'finished by'."@en ;
+    owl:inverseOf :finish_temporally_part_of ;
+    rdfs:subPropertyOf :temporally_has_part ;
+    rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000008> ;
+    rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> .
+
+:temporally_contains a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:label "temporally contains"@en ;
+    skos:prefLabel "temporally contains"@en ;
+    rdfs:comment "a Temporally Contains b: the converse of temporally interior part of (Gruhier 2016 primitive 'IPt'). A kind of temporally has part. Corresponds to Allen's (1983) interval relation 'contains'."@en ;
+    owl:inverseOf :temporally_interior_part_of ;
+    rdfs:subPropertyOf :temporally_has_part ;
+    rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000008> ;
+    rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> .
+
+:temporally_after a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:label "temporally after"@en ;
+    skos:prefLabel "temporally after"@en ;
+    rdfs:comment "b is Temporally After a: the converse of temporally precedes (Gruhier 2016 primitive 'tp'); b begins after a ends. Transitive. Corresponds to Allen's (1983) interval relation 'after'."@en ;
+    owl:inverseOf :temporally_precedes ;
+    rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000008> ;
+    rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> .
+
+:temporally_met_by a owl:ObjectProperty ;
+    rdfs:label "temporally met by"@en ;
+    skos:prefLabel "temporally met by"@en ;
+    rdfs:comment "b is Temporally Met By a: the converse of temporally tangent to (Gruhier 2016 primitive 'Tt'); b begins exactly when a ends. Corresponds to Allen's (1983) interval relation 'met by'."@en ;
+    owl:inverseOf :temporally_tangent_to ;
     rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000008> ;
     rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> .
 
