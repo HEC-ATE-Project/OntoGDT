@@ -960,9 +960,9 @@ bfo:BFO_0000003 a owl:Class ;
     rdfs:comment "Permits one rotation and one translation about/along the same axis (2 DOF) (Fr. liaison pivot glissant)."@en ;
     rdfs:subClassOf :KinematicPair .
 
-:HelicalJoint a owl:Class ;
-    rdfs:label "Helical Joint"@en ;
-    skos:prefLabel "Helical joint"@en ;
+:HelicoidalJoint a owl:Class ;
+    rdfs:label "Helicoidal Joint"@en ;
+    skos:prefLabel "Helicoidal joint"@en ;
     rdfs:comment "Permits a coupled rotation and translation along an axis (1 DOF, screw) (Fr. liaison helicoidale)."@en ;
     rdfs:subClassOf :KinematicPair .
 
@@ -1335,7 +1335,7 @@ bfo:BFO_0000003 a owl:Class ;
 :ScrewPositioningOperation a owl:Class ;
     rdfs:label "Screw Positioning Operation"@en ;
     skos:prefLabel "Screw positioning operation"@en ;
-    rdfs:comment "Positions a part so as to establish a helical joint. Written ScrewOP by Gruhier et al. (2016)."@en ;
+    rdfs:comment "Positions a part so as to establish a helicoidal joint. Written ScrewOP by Gruhier et al. (2016)."@en ;
     rdfs:subClassOf :KinematicPairPositioningOperation .
 
 :TechnologicalPairPositioningOperation a owl:Class ;
